@@ -1,14 +1,12 @@
 import React from "react";
-import { ListSubheader, Card, Stack, CardHeader, CardContent, List, ListItem, ListItemIcon, ListItemText, Typography, useTheme } from "@mui/material";
+import { ListSubheader, Card, Stack, CardHeader, CardContent, List, ListItem, ListItemIcon, useTheme, Typography } from "@mui/material";
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
-// import AddIcon from '@mui/icons-material/Add';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 
 const EducationHistory: React.FC<{ data: any }> = ({ data }) => {
-  console.log("data", data);
   const theme = useTheme();
-  return data.map((edu: any, index: number) => {
 
+  return data.map((edu: any, index: number) => {
     return (
       <Card key={`edu-${index}`} sx={{width: '100%'}}>
         <CardHeader

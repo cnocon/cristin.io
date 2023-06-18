@@ -28,16 +28,16 @@ const Skill = (props: any) => {
         bottom: '-6px',
         display: 'block',
         zIndex: 2,
-        width: '36px',
-        height: '26px',
-        fontWeight: 600,
-        padding: '2px 4px',
-        fontSize: '14px',
+        width: '42px',
+        height: '28px',
+        fontWeight: 700,
+        padding: '3px 5px',
+        fontSize: '1rem',
         fontFamily: 'Lato, Verdana, sans-serif',
         borderBottomLeftRadius: '0 !important',
         borderBottomRightRadius: '0 !important',
-        backgroundColor: theme.palette.primary.main,
-        color: theme.palette.grey[100],
+        backgroundColor: theme.palette.secondary.main,
+        // color: theme.palette.grey[100],
       }}
       >
         {percentage}%
@@ -60,7 +60,7 @@ const Skill = (props: any) => {
             letterSpacing: '1px',
             height: '6px',
             width: `${percentage}%`,
-            backgroundColor: theme.palette.secondary.main
+            backgroundColor: theme.palette.secondary.main,
           }}
         ></div>
     </div>
