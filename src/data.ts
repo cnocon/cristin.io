@@ -1,3 +1,12 @@
+import JavascriptIcon from '@mui/icons-material/Javascript'
+import CssIcon from '@mui/icons-material/Css'
+import DataArrayIcon from '@mui/icons-material/DataArray'
+import MobileFriendlyIcon from '@mui/icons-material/MobileFriendly'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import AccessibilityIcon from '@mui/icons-material/Accessibility'
+import DataObjectIcon from '@mui/icons-material/DataObject'
+import CodeIcon from '@mui/icons-material/Code'
+
 const data = {
   courses: [
     {
@@ -77,47 +86,47 @@ const data = {
       {
         label: "JavaScript",
         percentage: 80,
-        icon: ""
+        icon: JavascriptIcon
       },
       {
         label: "SCSS, LESS, CSS",
         percentage: 75,
-        icon: ""
+        icon: CssIcon
       },
       {
         label: "Responsive Web Development",
         percentage: 70,
-        icon: ""
+        icon: MobileFriendlyIcon
       },
       {
         label: "Git",
         percentage: 70,
-        icon: ""
+        icon: GitHubIcon
       },
       {
         label: "React",
         percentage: 70,
-        icon: ""
+        icon: CodeIcon
       },
       {
         label: "a11y",
         percentage: 65,
-        icon: ""
+        icon: AccessibilityIcon
       },
       {
         label: "TypeScript",
         percentage: 50,
-        icon: ""
+        icon: DataArrayIcon
       },
       {
         label: "Ruby",
         percentage: 40,
-        icon: ""
+        icon: CodeIcon
       },
       {
         label: "RTL & Jest",
         percentage: 40,
-        icon: ""
+        icon: DataObjectIcon
       }
     ],
     softSkills: [ "Empathy to be an effective teammate", "Organizational abilities for managing projects independently", "Research skills to find the best solutions", "Enthusiasm and passion for front end work", "Positive attitude and willingness to handle a wide variety of responsibilities", "Effective communicator with people from varying technical backgrounds", "Dedicated to ongoing professional development", "5+ years of Agile experience", "12+ years of experience working on web applications in various capacities" ],

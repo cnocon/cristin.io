@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Stack } from "@mui/material"
+import Skill from "../Skill";
 // import GridItem from "@mui/material/Grid";
 import WorkHistory from "../Resume/WorkHistory";
 import styled from "@emotion/styled";
@@ -33,6 +34,7 @@ const Resume = () => {
           justifyContent="flex-start"
           alignItems="flex-start"
           spacing={1}
+          flexBasis={{xs: '100%', md: "60%"}}
         >
           <Heading title="Work History" />
           <WorkHistory data={data.resume.workHistory} />
@@ -43,10 +45,11 @@ const Resume = () => {
           justifyContent="flex-start"
           alignItems="flex-start"
           spacing={1}
+          flexBasis={{xs: '100%', md: "40%"}}
         >
           <Heading title="Technical Skills" />
           {data.resume.technicalSkills.map((skill: any, index: any) => {
-            return <h5>{skill.label}</h5>
+            return <Skill label={skill.label} percentage={skill.percentage} icon={skill.icon} />
           })}
           {data.courses.map((course: any, index: any) => {
             return <h5>{course.description}</h5>
