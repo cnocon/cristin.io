@@ -38,7 +38,7 @@ const WorkHistory: React.FC<{ data: any }> = ({ data }) => {
             {job.description.map((bullet: string, index: number) => {
               return <ListItem key={`work-desc-${index}`}>
                 <ListItemIcon>
-                  <CheckIcon sx={{color: theme.palette.secondary.main}} />
+                  <CheckIcon sx={{color: theme.palette.grey.A700}} />
                 </ListItemIcon>
 
                 <ListItemText primary={bullet} />
@@ -51,10 +51,11 @@ const WorkHistory: React.FC<{ data: any }> = ({ data }) => {
               <List>
                 {job.honors.map((honor: any, index: number) => {return (
                   <ListItem key={`honor-${index}`} sx={{ display: 'flex', flexWrap: 'wrap', textTransform: 'uppercase', fontWeight: 400}}>
-                    <ListSubheader sx={{lineHeight: 1.25, textTransform: 'none', flexBasis: '100%', marginLeft: '-1rem'}} inset>{honor.detail}</ListSubheader>
+
                     <ListItemIcon>
                       <EmojiEventsIcon sx={{color: theme.palette.secondary.main}} />
                     </ListItemIcon> {honor.name}
+                    <ListSubheader sx={{lineHeight: 1.25, textTransform: 'none', flexBasis: '100%', marginLeft: '-1rem'}} inset>{honor.detail}</ListSubheader>
 
                   </ListItem>
                 )})}
