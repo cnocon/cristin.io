@@ -49,36 +49,38 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
 
   return (
 
-    <AppBar position="static" sx={{boxShadow: 0}}>
-      <Toolbar disableGutters>
+    <AppBar position="static" sx={{boxShadow: 0, backgroundColor: 'inherit', color: theme.palette.grey.A700
+    }}>
+      <Toolbar disableGutters sx={{color: theme.palette.grey.A700}}>
 
-        <Avatar sx={{ display: { xs: "none", md: "flex" }, mr: 1, backgroundColor: theme.palette.primary.light }} src="https://vue.cristin.io/img/square-portrait.d29137a7.png" />
+        <Avatar sx={{ display: { xs: "none", md: "flex" }, mr: 1, backgroundColor: theme.palette.primary.light, border: `2px solid ${theme.palette.primary.main}` }} src="https://vue.cristin.io/img/square-portrait.d29137a7.png" />
         <Typography
           variant="h6"
           noWrap
           component="a"
           href="/"
+          color={theme.palette.grey.A700}
           sx={{
             mr: 2,
             display: { xs: "none", md: "flex" },
             fontFamily: "Pacifico, serif",
             fontWeight: 700,
             letterSpacing: ".3rem",
-            color: "inherit",
+            color: theme.palette.primary.dark,
             textDecoration: "none"
           }}
         >
           Cristin O'Connor
         </Typography>
 
-        <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+        <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" }, color: theme.palette.grey.A700 }}>
           <IconButton
             size="large"
             aria-label="account of current user"
             aria-controls="menu-appbar"
             aria-haspopup="true"
             onClick={handleOpenNavMenu}
-            color="inherit"
+            sx={{color: theme.palette.grey.A700}}
           >
             <MenuIcon />
           </IconButton>
@@ -97,18 +99,18 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
             open={Boolean(anchorElNav)}
             onClose={handleCloseNavMenu}
             sx={{
-              display: { xs: "block", md: "none" }
+              display: { xs: "block", md: "none" },
             }}
           >
             {pages.map((page) => (
-
               <MenuItem
                 key={page}
+                sx={{color: theme.palette.grey.A700}}
                 onClick={(e) => {
                   e.preventDefault();
                   navigate(page === "Home" ? "/" : `/${page.toLowerCase()}`);
                 }}>
-                <Typography textAlign="center">{page}</Typography>
+                <Typography textAlign="center" sx={{color: theme.palette.grey.A700}} color={theme.palette.grey.A700}>{page}</Typography>
               </MenuItem>
             ))}
           </Menu>
@@ -129,18 +131,18 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
             fontFamily: "Pacifico, serif",
             fontWeight: 700,
             letterSpacing: ".3rem",
-            color: "inherit",
+            color: theme.palette.grey.A700,
             textDecoration: "none"
           }}
         >
           Cristin O'Connor
         </Typography>
-        <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+        <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex", color: theme.palette.grey.A700 } }}>
           {pages.map((page) => (
             <Button
               key={page}
               onClick={() => window.location.pathname = page === "Home" ? "/" : `/${page.toLowerCase()}`}
-              sx={{ my: 2, color: "white", display: "block" }}
+              sx={{ my: 2, color: theme.palette.primary.dark, display: "block" }}
             >
               {page}
             </Button>

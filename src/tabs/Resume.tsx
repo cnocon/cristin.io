@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Stack } from "@mui/material"
+import { Container, Stack, useTheme } from "@mui/material"
 import Skill from "../Skill";
 // import GridItem from "@mui/material/Grid";
 import WorkHistory from "../Resume/WorkHistory";
@@ -11,12 +11,12 @@ const StyledTitle = styled.h3`
   font-size: 2rem;
 `
 
-const Heading: React.FC<{ title?: string }> = ({ title }) => {
-  return <StyledTitle>{title}</StyledTitle>
+const Heading = (props: any) => {
+  return <StyledTitle style={props?.style || {}}>{props.title}</StyledTitle>
 
 }
 const Resume = () => {
-
+  const theme = useTheme();
   if (!data) {
     return <h1>Problem fetching data</h1>
   }

@@ -15,9 +15,9 @@ import { BrowserRouter } from 'react-router-dom';
 let newTheme = createTheme({
   palette: {
     primary: {
-      main: 'hsl(216, 80%, 39%)',
+      main: 'hsl(216, 80%, 41%)',
       light: 'hsl(216, 100%, 85%)',
-      dark: 'hsl(216, 70%, 15%)',
+      dark: 'hsl(216, 70%,26%)',
       contrastText: '#fff',
     },
     secondary: {
@@ -32,7 +32,7 @@ let newTheme = createTheme({
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-console.log(newTheme)
+
 root.render(
   <React.StrictMode>
     <CssBaseline />

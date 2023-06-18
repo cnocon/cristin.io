@@ -6,7 +6,7 @@ const Skill = (props: any) => {
   const theme = useTheme();
   const { label, percentage, icon: Icon } = props;
   return (
-    <div style={{width: '100%'}}>
+    <div style={{width: '100%', paddingTop: 0, marginTop: 0}}>
     <div
       style={{
         position: 'relative',
@@ -18,10 +18,11 @@ const Skill = (props: any) => {
         fontWeight: 500,
         fontFamily: 'Oswald, Impact, sans-serif',
         textTransform: 'uppercase',
-        height: '50px'
+        height: '50px',
+        color: theme.palette.secondary.dark
       }}
     >
-      <Icon style={{height: '24px', width: '24px', marginRight: '6px'}}/> {label} <div style={{
+      <Icon style={{height: '24px', width: '24px', marginRight: '6px', color: theme.palette.grey.A700}}/> {label} <div style={{
         position: 'absolute',
         right: 0,
         bottom: '-6px',
