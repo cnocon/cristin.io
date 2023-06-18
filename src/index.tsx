@@ -15,7 +15,7 @@ let newTheme = createTheme({
   palette: {
     primary: {
       main: 'hsl(216, 80%, 41%)',
-      light: 'hsl(216, 100%, 85%)',
+      light: 'hsl(216, 100%, 90%)',
       dark: 'hsl(216, 70%,26%)',
       contrastText: '#fff',
     },

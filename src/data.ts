@@ -1,4 +1,6 @@
 import JavascriptIcon from '@mui/icons-material/Javascript'
+import DataObjectSharpIcon from '@mui/icons-material/DataObjectSharp'
+import CodeOutlinedIcon from '@mui/icons-material/CodeOutlined'
 import CssIcon from '@mui/icons-material/Css'
 import SchemaSharpIcon from '@mui/icons-material/SchemaSharp'
 import DataArrayIcon from '@mui/icons-material/DataArray'
@@ -88,11 +90,16 @@ const data = {
       {
         label: "JavaScript",
         percentage: 80,
-        icon: JavascriptIcon
+        icon: DataObjectSharpIcon
+      },
+      {
+        label: "React",
+        percentage: 75,
+        icon: CodeIcon
       },
       {
         label: "SCSS, LESS, CSS",
-        percentage: 75,
+        percentage: 72,
         icon: CssIcon
       },
       {
@@ -106,11 +113,6 @@ const data = {
         icon: GitHubIcon
       },
       {
-        label: "React",
-        percentage: 70,
-        icon: CodeIcon
-      },
-      {
         label: "a11y",
         percentage: 65,
         icon: AccessibilityIcon
@@ -119,16 +121,6 @@ const data = {
         label: "TypeScript",
         percentage: 50,
         icon: DataArrayIcon
-      },
-      {
-        label: "Ruby",
-        percentage: 40,
-        icon: CodeIcon
-      },
-      {
-        label: "RTL & Jest",
-        percentage: 40,
-        icon: DataObjectIcon
       }
     ],
     softSkills: [ "Empathy to be an effective teammate", "Organizational abilities for managing projects independently", "Research skills to find the best solutions", "Enthusiasm and passion for front end work", "Positive attitude and willingness to handle a wide variety of responsibilities", "Effective communicator with people from varying technical backgrounds", "Dedicated to ongoing professional development", "5+ years of Agile experience", "12+ years of experience working on web applications in various capacities" ],

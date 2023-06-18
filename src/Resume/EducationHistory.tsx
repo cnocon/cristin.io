@@ -8,7 +8,7 @@ const EducationHistory: React.FC<{ data: any }> = ({ data }) => {
 
   return data.map((edu: any, index: number) => {
     return (
-      <Card key={`edu-${index}`} sx={{width: '100%', boxShadow: 4}} variant="outlined">
+      <Card key={`edu-${index}`} sx={{width: '100%', boxShadow: 4, p: 2}} variant="outlined">
         <CardHeader
           title={edu.title}
           titleTypographyProps={{fontFamily: 'Oswald, serif', fontWeight: 500, textTransform: 'uppercase'}}
@@ -31,15 +31,14 @@ const EducationHistory: React.FC<{ data: any }> = ({ data }) => {
         />
         {edu?.honors?.length > 0 && (
           <CardContent sx={{paddingTop: 0}}>
-            <Typography sx={{letterSpacing: '1px', fontWeight: 500, fontSize: '1rem', fontFamily: 'Oswald, sans-serif', textTransform: 'uppercase'}}>Honors & Awards</Typography>
+            <Typography sx={{letterSpacing: '1px', fontWeight: 500, fontSize: '1rem', fontFamily: 'Oswald, sans-serif', textTransform: 'uppercase', mt: 0}}>Honors & Awards</Typography>
             <List>
               {edu.honors.map((honor: any, index: number) => {return (
                 <ListItem key={`honor-${index}`} sx={{ display: 'flex', flexWrap: 'nowrap', textTransform: 'uppercase', fontWeight: 400}}>
                   <ListItemIcon>
                     <EmojiEventsIcon sx={{color: theme.palette.secondary.main}} />
                   </ListItemIcon>
-                  <ListItemText>{honor.name} <Typography sx={{textTransform: 'none'}}>{honor.detail}</Typography></ListItemText>
-
+                  <ListItemText>{honor.name} <Typography sx={{textTransform: 'none', lineHeight: 1, mt: 1}}>{honor.detail}</Typography> </ListItemText>
                 </ListItem>
               )})}
             </List>

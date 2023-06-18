@@ -5,16 +5,15 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import Resume from "./tabs/Resume"
-import Pallette from './Pallette'
 import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom'
 
-export const STab = styled(Tab)`
+export const StyledTab = styled(Tab)`
   outline: 0
 `
 
 export default function MenuTabs() {
-  const [activeNav, setActiveNav] = React.useState("/contact");
+  const [activeNav, setActiveNav] = React.useState("/resume");
   const navigate = useNavigate();
 
 
@@ -35,8 +34,8 @@ export default function MenuTabs() {
       <TabContext value={activeNav}>
         <Box {...boxprops}>
           <TabList onChange={handleChange} aria-label="lab API tabs example">
-            <STab label="contact" value="contact" />
-            <STab label="resume" value="resume" />
+            <StyledTab label="contact" value="contact" />
+            <StyledTab label="resume" value="resume" />
           </TabList>
         </Box>
         <TabPanel value="resume"><Resume /></TabPanel>

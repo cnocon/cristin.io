@@ -7,73 +7,53 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-// import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import { StyledComponentProps, useTheme } from "@mui/material"
-// import { Link } from "@mui/material"
-// import AdbIcon from "@mui/icons-material/Adb";
+import { useTheme } from "@mui/material"
 
-
-
-const pages = ["Home", "Contact", "Resume"];
-// const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const pages = ["Resume"];
 
 const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
+  const theme = useTheme();
   const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
-  // const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
-  //   null
-  // );
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
-  // const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-  //   setAnchorElUser(event.currentTarget);
-  // };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const theme = useTheme();
-
-  // const handleCloseUserMenu = () => {
-  //   setAnchorElUser(null);
-  // };
-
   return (
-
     <AppBar position="static" sx={{boxShadow: 0, backgroundColor: 'inherit'
     }}>
       <Toolbar sx={{mt: 4, mb: 2, flexWrap: 'wrap', justifyContent: 'center'}}>
         <Box sx={{flexBasis: "100%", display: 'flex', flexWrap: {xs: 'nowrap', md: 'wrap', justifyContent: 'center', alignItems: 'center'} }}>
           <Avatar
-            sx={{ display: { xs: "none", md: "flex" }, flexBasis: '80px', height: '80px', bgcolor: theme.palette.secondary.main, border: `2px solid ${theme.palette.primary.main}`, borderRadius: '50%', overflow: 'hidden', mx: 'auto', justifyContent: 'center'}}
+            sx={{ display: { xs: "none", md: "flex" }, flexBasis: '100px', height: '100px', bgcolor: theme.palette.grey[100], border: `6px solid ${theme.palette.secondary.main}`, borderRadius: '50%', overflow: 'hidden', mx: 'auto', justifyContent: 'center'}}
             src="https://vue.cristin.io/img/square-portrait.d29137a7.png"
           />
           <Typography
-            variant="h6"
+            variant="h1"
             noWrap
             component="a"
             href="/"
-            color={theme.palette.grey.A700}
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
               flexBasis: '100%',
               justifyContent: 'center',
               fontFamily: "Pacifico, serif",
-              fontWeight: 700,
+              fontWeight: 400,
               letterSpacing: ".3rem",
               textDecoration: "none",
-              fontSize: "2.5rem",
-              color: theme.palette.primary.dark
+              fontSize: "3.5rem",
+              color: theme.palette.getContrastText(theme.palette.primary.dark)
             }}
           >
             Cristin O'Connor
@@ -86,6 +66,7 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
+              sx={{color: theme.palette.getContrastText(theme.palette.primary.dark)}}
             >
               <MenuIcon />
             </IconButton>
@@ -136,14 +117,15 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
               fontFamily: "Pacifico, serif",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              textDecoration: "none"
+              textDecoration: "none",
+              color: theme.palette.getContrastText(theme.palette.primary.dark)
             }}
           >
             Cristin O'Connor
           </Typography>
         </Box>
 
-        <Box
+        {/* <Box
           sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, width: '100%', justifyContent: 'center'}}
         >
           {pages.map((page) => (
@@ -157,7 +139,7 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
               {page}
             </Button>
           ))}
-        </Box>
+        </Box> */}
 
         <Box sx={{ flexGrow: 0 }}></Box>
 

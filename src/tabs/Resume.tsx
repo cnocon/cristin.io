@@ -1,14 +1,14 @@
 import React from "react";
-import { Typography, Container, Stack, Alert } from "@mui/material"
+import { Typography, Stack, Alert, Container, useTheme } from "@mui/material"
 import Skill from "../Skill";
 import WorkHistory from "../Resume/WorkHistory";
 import EducationHistory from "../Resume/EducationHistory";
 import data from "../data";
 import Courses from "../Courses";
-import SimpleFade from "../SimpleFade";
 
 const Heading: React.FC<{ styles?: any, title: string }> = ({ styles, title }) => {
-  const allStyles = Object.assign(styles || {}, {fontFamily: 'Pacifico, script', fontSize: '2rem', margin: '3rem auto 0 !important'});
+  const theme = useTheme()
+  const allStyles = Object.assign(styles || {}, {fontFamily: 'Pacifico, script', fontSize: '2rem', margin: '3rem auto 0 !important', color: theme.palette.text.primary});
   return <Typography sx={allStyles || {}}>{title}</Typography>
 }
 
@@ -17,9 +17,9 @@ const Resume = () => {
     return <Alert variant="standard" color="error">Error: Problem fetching data</Alert>
   }
   return (
-    <SimpleFade>
-    <Container maxWidth="lg">
-      {!data ? <Alert variant="standard" color="error">Error: Problem fetching data</Alert> : (
+
+      !data ? <Container maxWidth="lg"><Alert variant="standard" color="error">Error: Problem fetching data</Alert></Container> : (
+      <Container maxWidth="lg" sx={{mb: 8}}>
       <Stack
         justifyContent="space-between"
         alignItems="flex-start"
@@ -54,10 +54,9 @@ const Resume = () => {
           <Heading title="Recent Coursework" />
           <Courses data={data.courses} />
         </Stack>
-      </Stack>)}
-    </Container>
-    </SimpleFade>
-  )
-}
+      </Stack>
+      </Container>))}
+
+
 
 export default Resume;

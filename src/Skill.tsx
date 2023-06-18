@@ -22,7 +22,7 @@ const Skill = (props: any) => {
         // color: theme.palette.primary.dark
       }}
     >
-      <Icon style={{height: '24px', width: '24px', marginRight: '6px'}}/> {label} <div style={{
+      <Icon style={{height: 'auto', maxWidth: '100%', width: '28px', marginRight: '6px'}}/> {label} <div style={{
         position: 'absolute',
         right: 0,
         bottom: '-6px',
