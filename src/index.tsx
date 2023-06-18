@@ -32,7 +32,7 @@ let newTheme = createTheme({
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-
+console.log(newTheme)
 root.render(
   <React.StrictMode>
     <CssBaseline />

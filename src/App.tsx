@@ -5,8 +5,11 @@ import Resume from './tabs/Resume';
 import Contact from './tabs/Contact';
 import Spinner from './Spinner';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Container } from '@mui/material'
+import { useTheme } from '@mui/material/styles';
 
 const App: React.FunctionComponent<{ children?: any }> = ({ children }) => {
+  const theme = useTheme();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -18,7 +21,7 @@ const App: React.FunctionComponent<{ children?: any }> = ({ children }) => {
   }
   return (
     <BrowserRouter>
-    <ResponsiveAppBar />
+    <Container maxWidth={false} sx={{backgroundColor: theme.palette.primary.main}}><Container maxWidth="lg" sx={{boxShadow: 0}}><ResponsiveAppBar /></Container></Container>
     <Page>
     <Routes>
       <Route path="/" element= {<Page><p>Home</p></Page>}/>
