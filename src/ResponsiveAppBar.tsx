@@ -54,7 +54,7 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
       <Toolbar sx={{mt: 4, mb: 2, flexWrap: 'wrap', justifyContent: 'center'}}>
         <Box sx={{flexBasis: "100%", display: 'flex', flexWrap: {xs: 'nowrap', md: 'wrap', justifyContent: 'center', alignItems: 'center'} }}>
           <Avatar
-            sx={{ display: { xs: "none", md: "flex" }, flexBasis: '80px', height: '80px', bgcolor: theme.palette.secondary.main, borderRadius: '50%', overflow: 'hidden', mx: 'auto', justifyContent: 'center'}}
+            sx={{ display: { xs: "none", md: "flex" }, flexBasis: '80px', height: '80px', bgcolor: theme.palette.secondary.main, border: `2px solid ${theme.palette.primary.main}`, borderRadius: '50%', overflow: 'hidden', mx: 'auto', justifyContent: 'center'}}
             src="https://vue.cristin.io/img/square-portrait.d29137a7.png"
           />
           <Typography
@@ -72,7 +72,8 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
               fontWeight: 700,
               letterSpacing: ".3rem",
               textDecoration: "none",
-              fontSize: "2.5rem"
+              fontSize: "2.5rem",
+              color: theme.palette.primary.dark
             }}
           >
             Cristin O'Connor

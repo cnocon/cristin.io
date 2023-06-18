@@ -15,11 +15,11 @@ export const STab = styled(Tab)`
 
 export default function MenuTabs() {
   const [activeNav, setActiveNav] = React.useState("/contact");
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-    // event.preventDefault();
+    event.preventDefault();
     setActiveNav(newValue);
   };
 
@@ -27,9 +27,7 @@ export default function MenuTabs() {
 
   React.useEffect(() => {
     console.log("activeNav", activeNav);
-    if (window.location.pathname !== activeNav) {
-      // navigate(`/${activeNav}`);
-    }
+    navigate(`/${activeNav}`);
   }, [activeNav])
 
   return (
@@ -41,7 +39,6 @@ export default function MenuTabs() {
             <STab label="resume" value="resume" />
           </TabList>
         </Box>
-        <TabPanel value="contact"><Pallette /></TabPanel>
         <TabPanel value="resume"><Resume /></TabPanel>
       </TabContext>
     </Box>

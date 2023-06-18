@@ -1,6 +1,4 @@
-import { Container, Grid } from "@mui/material"
 import React from "react";
-import GridItem from "@mui/material/Grid";
 import SimpleFade from "../SimpleFade";
 
 const Contact = () => {

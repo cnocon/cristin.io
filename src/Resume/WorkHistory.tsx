@@ -49,15 +49,13 @@ const WorkHistory: React.FC<{ data: any }> = ({ data }) => {
             <>
               <Typography sx={{letterSpacing: '1px', fontWeight: 500, fontSize: '1rem', fontFamily: 'Oswald, sans-serif', textTransform: 'uppercase'}}>Honors & Awards</Typography>
               <List>
-                {job.honors.map((honor: any, index: number) => {return (
-                  <ListItem key={`honor-${index}`} sx={{ display: 'flex', flexWrap: 'wrap', textTransform: 'uppercase', fontWeight: 400}}>
-
+                {job.honors.map((honor: any, index: number) => {return (<>
+                  <ListItem key={`honor-${index}`} sx={{ display: 'flex', flexWrap: 'wrap', textTransform: 'uppercase', fontWeight: 400, lineHeight: '1em', my: 1}}>
                     <ListItemIcon>
                       <EmojiEventsIcon sx={{color: theme.palette.secondary.main}} />
                     </ListItemIcon> {honor.name}
-                    <ListSubheader sx={{lineHeight: 1.25, textTransform: 'none', flexBasis: '100%', marginLeft: '-1rem'}} inset>{honor.detail}</ListSubheader>
-
                   </ListItem>
+                  <ListSubheader sx={{lineHeight: '1em', textTransform: 'none', flexBasis: '100%'}} inset>{honor.detail}</ListSubheader></>
                 )})}
               </List>
             </>

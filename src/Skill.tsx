@@ -36,8 +36,8 @@ const Skill = (props: any) => {
         fontFamily: 'Lato, Verdana, sans-serif',
         borderBottomLeftRadius: '0 !important',
         borderBottomRightRadius: '0 !important',
-        backgroundColor: theme.palette.secondary.main,
-        // color: theme.palette.grey[100],
+        backgroundColor: theme.palette.primary.dark,
+        color: theme.palette.grey[100],
       }}
       >
         {percentage}%
