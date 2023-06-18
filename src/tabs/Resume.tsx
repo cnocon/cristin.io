@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Stack } from "@mui/material"
+import { Typography, Container, Stack } from "@mui/material"
 import Skill from "../Skill";
 import WorkHistory from "../Resume/WorkHistory";
 import styled from "@emotion/styled";
@@ -7,13 +7,12 @@ import EducationHistory from "../Resume/EducationHistory";
 import data from "../data";
 import Courses from "../Courses";
 const StyledTitle = styled.h3`
-  font-family: Pacifico, script;
-  font-size: 2rem;
+
 `
 
 const Heading: React.FC<{ styles?: any, title: string }> = ({ styles, title }) => {
-  const allStyles = {style: styles} || {};
-  return <StyledTitle {...allStyles}>{title}</StyledTitle>
+  const allStyles = Object.assign(styles, {fontFamily: 'Pacifico, script', fontSize: '2rem'});
+  return <Typography sx={allStyles}>{title}</Typography>
 }
 
 const Resume = () => {
@@ -36,7 +35,7 @@ const Resume = () => {
           spacing={4}
           flexBasis={{xs: '100%', md: "60%"}}
         >
-          <Heading title="Work History" styles={{marginTop: '3rem'}} />
+          <Heading title="Work History" styles={{marginTop: '3rem', display: 'flex', alignItems: 'center'}} />
           <WorkHistory data={data.resume.workHistory} />
         </Stack>
 
