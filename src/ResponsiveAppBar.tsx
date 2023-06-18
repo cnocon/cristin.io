@@ -148,8 +148,10 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
           {pages.map((page) => (
             <Button
               key={page}
+              variant="contained"
+              color="primary"
               onClick={() => window.location.pathname = page === "Home" ? "/" : `/${page.toLowerCase()}`}
-              sx={{ mx: 1, my: 2, display: "block", color: theme.palette.grey[100], backgroundColor: theme.palette.secondary.main}}
+              sx={{ mx: 1, my: 2}}
             >
               {page}
             </Button>

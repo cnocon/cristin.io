@@ -1,7 +1,5 @@
 import React, { ReactElement } from 'react';
-import { Container } from '@mui/material'
-import Stack from '@mui/material/Stack';
-import ListItem from '@mui/material/Stack';
+import { Container } from '@mui/material';
 
 const Page: React.FC<{ children: ReactElement }> = ({ children }) => {
 

@@ -36,7 +36,7 @@ const Skill = (props: any) => {
         fontFamily: 'Lato, Verdana, sans-serif',
         borderBottomLeftRadius: '0 !important',
         borderBottomRightRadius: '0 !important',
-        backgroundColor: theme.palette.primary.dark,
+        backgroundColor: theme.palette.primary.main,
         color: theme.palette.grey[100],
       }}
       >

@@ -9,7 +9,7 @@ import { Container } from '@mui/material'
 import { useTheme } from '@mui/material/styles';
 
 const App: React.FunctionComponent<{ children?: any }> = ({ children }) => {
-  const theme = useTheme();
+  // const theme = useTheme();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

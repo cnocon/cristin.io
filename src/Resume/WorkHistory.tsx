@@ -38,7 +38,7 @@ const WorkHistory: React.FC<{ data: any }> = ({ data }) => {
             {job.description.map((bullet: string, index: number) => {
               return <ListItem>
                 <ListItemIcon>
-                  <CheckIcon />
+                  <CheckIcon sx={{color: theme.palette.primary.main}} />
                 </ListItemIcon>
 
                 <ListItemText primary={bullet} />

@@ -9,7 +9,6 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { BrowserRouter } from 'react-router-dom';
 
 // const LINEAR_RAINBOW_GRADIENT = "linear-gradient(-240deg,#bca2f6,#cdb9f8 5%,#b3e9ff 17%,#b3e9ff 25%,#bffcf7 35%,#ffe366 60%,#fad1d1 85%)";
 let newTheme = createTheme({
@@ -23,7 +22,7 @@ let newTheme = createTheme({
     secondary: {
       main: 'hsl(45, 85%, 50%)',
       light: 'hsl(45, 100%, 91%)',
-      dark: 'hsl(45, 100%, 20%)',
+      dark: 'hsl(45, 100%, 25%)',
       contrastText: '#000',
     }
   }
