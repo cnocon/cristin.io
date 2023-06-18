@@ -1,19 +1,21 @@
 import JavascriptIcon from '@mui/icons-material/Javascript'
 import CssIcon from '@mui/icons-material/Css'
+import SchemaSharpIcon from '@mui/icons-material/SchemaSharp'
 import DataArrayIcon from '@mui/icons-material/DataArray'
 import MobileFriendlyIcon from '@mui/icons-material/MobileFriendly'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import AccessibilityIcon from '@mui/icons-material/Accessibility'
 import DataObjectIcon from '@mui/icons-material/DataObject'
 import CodeIcon from '@mui/icons-material/Code'
-
+import PhishingIcon from '@mui/icons-material/Phishing'
+import { AccountTreeSharp } from '@mui/icons-material'
 const data = {
   courses: [
     {
       title: "Advanced JavaScript",
       url: "https://ui.dev/advanced-javascript",
       platform: "ui.dev",
-      Icon: "",
+      Icon: JavascriptIcon,
       instructor: null,
       completedDate: "03/10/2023",
       certificateUrl: "/advanced-javascript-certificate.pdf",
@@ -26,7 +28,7 @@ const data = {
       title: "React Hooks",
       url: "https://ui.dev/react-hooks",
       platform: "ui.dev",
-      Icon: "",
+      Icon: PhishingIcon,
       instructor: null,
       completedDate: "In Progress",
       certificateUrl: null,
@@ -39,7 +41,7 @@ const data = {
       title: "Redux",
       url: "https://ui.dev/c/redux/introduction-philosophy-and-tips",
       platform: "ui.dev",
-      Icon: "",
+      Icon: AccountTreeSharp,
       instructor: null,
       completedDate: "02/18/2023",
       certificateUrl: "/redux-certificate.pdf",

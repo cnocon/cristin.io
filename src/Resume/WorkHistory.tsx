@@ -12,7 +12,7 @@ const WorkHistory: React.FC<{ data: any }> = ({ data }) => {
     const titleString = `${job.title}`;// – ;
 
     return (
-      <Card key={`job-${index}`} variant="outlined">
+      <Card key={`job-${index}`} variant="outlined" sx={{boxShadow: 4}}>
         <CardHeader
           title={titleString}
           titleTypographyProps={{fontFamily: 'Oswald, serif', fontWeight: 500, textTransform: 'uppercase'}}

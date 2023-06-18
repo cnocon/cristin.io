@@ -1,5 +1,5 @@
 import React from "react";
-import { ListSubheader, Card, Stack, CardHeader, CardContent, List, ListItem, ListItemIcon, useTheme, Typography, ListItemText } from "@mui/material";
+import { Card, Stack, CardHeader, CardContent, List, ListItem, ListItemIcon, useTheme, Typography, ListItemText } from "@mui/material";
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 
@@ -8,7 +8,7 @@ const EducationHistory: React.FC<{ data: any }> = ({ data }) => {
 
   return data.map((edu: any, index: number) => {
     return (
-      <Card key={`edu-${index}`} sx={{width: '100%', boxShadow: 0}}>
+      <Card key={`edu-${index}`} sx={{width: '100%', boxShadow: 4}} variant="outlined">
         <CardHeader
           title={edu.title}
           titleTypographyProps={{fontFamily: 'Oswald, serif', fontWeight: 500, textTransform: 'uppercase'}}
@@ -29,25 +29,22 @@ const EducationHistory: React.FC<{ data: any }> = ({ data }) => {
           }
           subheaderTypographyProps={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'flex-start', fontFamily: 'Lato, sans-serif', fontWeight: 800, fontSize: '1.125rem'}}
         />
+        {edu?.honors?.length > 0 && (
+          <CardContent sx={{paddingTop: 0}}>
+            <Typography sx={{letterSpacing: '1px', fontWeight: 500, fontSize: '1rem', fontFamily: 'Oswald, sans-serif', textTransform: 'uppercase'}}>Honors & Awards</Typography>
+            <List>
+              {edu.honors.map((honor: any, index: number) => {return (
+                <ListItem key={`honor-${index}`} sx={{ display: 'flex', flexWrap: 'nowrap', textTransform: 'uppercase', fontWeight: 400}}>
+                  <ListItemIcon>
+                    <EmojiEventsIcon sx={{color: theme.palette.secondary.main}} />
+                  </ListItemIcon>
+                  <ListItemText>{honor.name} <Typography sx={{textTransform: 'none'}}>{honor.detail}</Typography></ListItemText>
 
-
-          {edu?.honors?.length > 0 && (
-
-            <CardContent sx={{paddingTop: 0}}>
-              <Typography sx={{letterSpacing: '1px', fontWeight: 500, fontSize: '1rem', fontFamily: 'Oswald, sans-serif', textTransform: 'uppercase'}}>Honors & Awards</Typography>
-              <List>
-                {edu.honors.map((honor: any, index: number) => {return (
-                  <ListItem key={`honor-${index}`} sx={{ display: 'flex', flexWrap: 'nowrap', textTransform: 'uppercase', fontWeight: 400}}>
-                    <ListItemIcon>
-                      <EmojiEventsIcon sx={{color: theme.palette.secondary.main}} />
-                    </ListItemIcon>
-                    <ListItemText>{honor.name} <Typography sx={{textTransform: 'none'}}>{honor.detail}</Typography></ListItemText>
-
-                  </ListItem>
-                )})}
-              </List>
-            </CardContent>
-          )}
+                </ListItem>
+              )})}
+            </List>
+          </CardContent>
+        )}
       </Card>
     )
   })
