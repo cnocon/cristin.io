@@ -53,7 +53,7 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
     }}>
       <Toolbar disableGutters sx={{color: theme.palette.grey.A700}}>
 
-        <Avatar sx={{ display: { xs: "none", md: "flex" }, mr: 1, backgroundColor: theme.palette.primary.light, border: `2px solid ${theme.palette.primary.main}` }} src="https://vue.cristin.io/img/square-portrait.d29137a7.png" />
+        <Avatar sx={{ display: { xs: "none", md: "flex" }, mr: 1 /*, backgroundColor: theme.palette.primary.light, border: `2px solid ${theme.palette.primary.main}`*/ }} src="https://vue.cristin.io/img/square-portrait.d29137a7.png" />
         <Typography
           variant="h6"
           noWrap
@@ -66,7 +66,7 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
             fontFamily: "Pacifico, serif",
             fontWeight: 700,
             letterSpacing: ".3rem",
-            color: theme.palette.primary.light,
+            color: theme.palette.grey[100],
             textDecoration: "none"
           }}
         >
@@ -131,7 +131,7 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
             fontFamily: "Pacifico, serif",
             fontWeight: 700,
             letterSpacing: ".3rem",
-            color: theme.palette.primary.light,
+            color: theme.palette.grey[100],
             textDecoration: "none"
           }}
         >
@@ -142,7 +142,7 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
             <Button
               key={page}
               onClick={() => window.location.pathname = page === "Home" ? "/" : `/${page.toLowerCase()}`}
-              sx={{ my: 2, color: theme.palette.primary.light, display: "block" }}
+              sx={{ my: 2, color: theme.palette.grey[100], display: "block" }}
             >
               {page}
             </Button>

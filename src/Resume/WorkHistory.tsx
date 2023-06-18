@@ -22,11 +22,11 @@ const WorkHistory: React.FC<{ data: any }> = ({ data }) => {
                 direction="row"
                 justifyContent="flex-start"
                 alignItems="center"
-                sx={{flexBasis: '100%', flexWrap: 'wrap', color: theme.palette.secondary.dark}}
+                sx={{flexBasis: '100%', flexWrap: 'wrap'}}
               >
                 {job.company} <DoubleArrowIcon sx={{color: theme.palette.secondary.main}}/> {job.location}
               </Stack>
-              <div style={{fontWeight: 400}}>
+              <div style={{textTransform: 'uppercase', fontSize: '1rem', fontWeight: 400}}>
                 {job.start} - {job.end}
               </div>
             </div>

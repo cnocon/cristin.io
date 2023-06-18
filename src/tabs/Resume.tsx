@@ -36,7 +36,7 @@ const Resume = () => {
           spacing={1}
           flexBasis={{xs: '100%', md: "60%"}}
         >
-          <Heading title="Work History" />
+          <Heading title="Work History"/* style={{color: theme.palette.primary.dark}} *//>
           <WorkHistory data={data.resume.workHistory} />
         </Stack>
 
@@ -47,7 +47,7 @@ const Resume = () => {
           spacing={1}
           flexBasis={{xs: '100%', md: "40%"}}
         >
-          <Heading title="Technical Skills" />
+          <Heading title="Technical Skills" /*style={{color: theme.palette.primary.dark}} *//>
           {data.resume.technicalSkills.map((skill: any, index: any) => {
             return <Skill label={skill.label} percentage={skill.percentage} icon={skill.icon} />
           })}

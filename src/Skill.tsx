@@ -18,7 +18,8 @@ const Skill = (props: any) => {
         fontWeight: 500,
         fontFamily: 'Oswald, Impact, sans-serif',
         textTransform: 'uppercase',
-        height: '50px'
+        height: '50px',
+        // color: theme.palette.primary.dark
       }}
     >
       <Icon style={{height: '24px', width: '24px', marginRight: '6px'}}/> {label} <div style={{
