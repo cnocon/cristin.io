@@ -66,7 +66,7 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
             fontFamily: "Pacifico, serif",
             fontWeight: 700,
             letterSpacing: ".3rem",
-            color: theme.palette.primary.dark,
+            color: theme.palette.primary.light,
             textDecoration: "none"
           }}
         >
@@ -131,7 +131,7 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
             fontFamily: "Pacifico, serif",
             fontWeight: 700,
             letterSpacing: ".3rem",
-            color: theme.palette.grey.A700,
+            color: theme.palette.primary.light,
             textDecoration: "none"
           }}
         >
@@ -142,7 +142,7 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
             <Button
               key={page}
               onClick={() => window.location.pathname = page === "Home" ? "/" : `/${page.toLowerCase()}`}
-              sx={{ my: 2, color: theme.palette.primary.dark, display: "block" }}
+              sx={{ my: 2, color: theme.palette.primary.light, display: "block" }}
             >
               {page}
             </Button>

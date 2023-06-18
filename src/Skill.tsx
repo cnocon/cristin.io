@@ -18,11 +18,10 @@ const Skill = (props: any) => {
         fontWeight: 500,
         fontFamily: 'Oswald, Impact, sans-serif',
         textTransform: 'uppercase',
-        height: '50px',
-        color: theme.palette.secondary.dark
+        height: '50px'
       }}
     >
-      <Icon style={{height: '24px', width: '24px', marginRight: '6px', color: theme.palette.grey.A700}}/> {label} <div style={{
+      <Icon style={{height: '24px', width: '24px', marginRight: '6px'}}/> {label} <div style={{
         position: 'absolute',
         right: 0,
         bottom: '-6px',
@@ -36,7 +35,7 @@ const Skill = (props: any) => {
         fontFamily: 'Lato, Verdana, sans-serif',
         borderBottomLeftRadius: '0 !important',
         borderBottomRightRadius: '0 !important',
-        backgroundColor: theme.palette.grey[700],
+        backgroundColor: theme.palette.primary.dark,
         color: theme.palette.grey[100],
       }}
       >
