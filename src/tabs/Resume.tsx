@@ -22,11 +22,11 @@ const Resume = () => {
   return (
     <Container maxWidth="lg">
       <Stack
-        direction="row"
         justifyContent="space-between"
         alignItems="flex-start"
         spacing={4}
         flexGrow={1}
+        direction={{ xs: 'column', md: 'row' }}
       >
         <Stack
           direction="column"

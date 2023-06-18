@@ -17,8 +17,21 @@ const WorkHistory: React.FC<{ data: any }> = ({ data }) => {
           title={titleString}
           titleTypographyProps={{fontFamily: 'Oswald, serif', fontWeight: 500, textTransform: 'uppercase'}}
           subheader={
-          <div><Stack direction="row" justifyContent="center" alignItems="center">{job.company} <DoubleArrowIcon sx={{color: theme.palette.secondary.main}}/> {job.location}</Stack><div style={{fontWeight: 400}}>{job.start} - {job.end}</div></div>}
-          subheaderTypographyProps={{display: 'flex', justifyContent: 'flex-start', fontFamily: 'Lato, sans-serif', fontWeight: 800, fontSize: '1.125rem'}}
+            <div>
+              <Stack
+                direction="row"
+                justifyContent="flex-start"
+                alignItems="center"
+                sx={{flexBasis: '100%', flexWrap: 'wrap'}}
+              >
+                {job.company} <DoubleArrowIcon sx={{color: theme.palette.secondary.main}}/> {job.location}
+              </Stack>
+              <div style={{fontWeight: 400}}>
+                {job.start} - {job.end}
+              </div>
+            </div>
+          }
+          subheaderTypographyProps={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'flex-start', fontFamily: 'Lato, sans-serif', fontWeight: 800, fontSize: '1.125rem'}}
         />
         <CardContent sx={{paddingTop: 0}}>
           <List>
