@@ -21,7 +21,7 @@ const App: React.FunctionComponent<{ children?: any }> = ({ children }) => {
   }
   return (
     <BrowserRouter>
-    <Container maxWidth={false} sx={{backgroundColor: theme.palette.primary.dark, color: theme.palette.primary.light}}><Container maxWidth="lg" sx={{boxShadow: 0, backgroundColor: theme.palette.primary.dark, color: theme.palette.primary.light}}><ResponsiveAppBar /></Container></Container>
+    <Container maxWidth={false}><Container maxWidth="lg" sx={{boxShadow: 0}}><ResponsiveAppBar /></Container></Container>
     <Page>
     <Routes>
       <Route path="/" element= {<Page><p>Home</p></Page>}/>

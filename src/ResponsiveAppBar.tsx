@@ -49,100 +49,107 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
 
   return (
 
-    <AppBar position="static" sx={{boxShadow: 0, backgroundColor: 'inherit', color: theme.palette.grey.A700
+    <AppBar position="static" sx={{boxShadow: 0, backgroundColor: 'inherit'
     }}>
-      <Toolbar disableGutters sx={{color: theme.palette.grey.A700}}>
-
-        <Avatar sx={{ display: { xs: "none", md: "flex" }, mr: 1 /*, backgroundColor: theme.palette.primary.light, border: `2px solid ${theme.palette.primary.main}`*/ }} src="https://vue.cristin.io/img/square-portrait.d29137a7.png" />
-        <Typography
-          variant="h6"
-          noWrap
-          component="a"
-          href="/"
-          color={theme.palette.grey.A700}
-          sx={{
-            mr: 2,
-            display: { xs: "none", md: "flex" },
-            fontFamily: "Pacifico, serif",
-            fontWeight: 700,
-            letterSpacing: ".3rem",
-            color: theme.palette.grey[100],
-            textDecoration: "none"
-          }}
-        >
-          Cristin O'Connor
-        </Typography>
-
-        <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" }, color: theme.palette.grey.A700 }}>
-          <IconButton
-            size="large"
-            aria-label="account of current user"
-            aria-controls="menu-appbar"
-            aria-haspopup="true"
-            onClick={handleOpenNavMenu}
-            sx={{color: theme.palette.grey.A700}}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Menu
-            id="menu-appbar"
-            anchorEl={anchorElNav}
-            anchorOrigin={{
-              vertical: "bottom",
-              horizontal: "left"
-            }}
-            keepMounted
-            transformOrigin={{
-              vertical: "top",
-              horizontal: "left"
-            }}
-            open={Boolean(anchorElNav)}
-            onClose={handleCloseNavMenu}
+      <Toolbar sx={{mt: 4, mb: 2, flexWrap: 'wrap', justifyContent: 'center'}}>
+        <Box sx={{flexBasis: "100%", display: 'flex', flexWrap: {xs: 'nowrap', md: 'wrap', justifyContent: 'center', alignItems: 'center'} }}>
+          <Avatar
+            sx={{ display: { xs: "none", md: "flex" }, flexBasis: '80px', height: '80px', bgcolor: theme.palette.secondary.main, borderRadius: '50%', overflow: 'hidden', mx: 'auto', justifyContent: 'center'}}
+            src="https://vue.cristin.io/img/square-portrait.d29137a7.png"
+          />
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="/"
+            color={theme.palette.grey.A700}
             sx={{
-              display: { xs: "block", md: "none" },
+              mr: 2,
+              display: { xs: "none", md: "flex" },
+              flexBasis: '100%',
+              justifyContent: 'center',
+              fontFamily: "Pacifico, serif",
+              fontWeight: 700,
+              letterSpacing: ".3rem",
+              textDecoration: "none",
+              fontSize: "2.5rem"
             }}
           >
-            {pages.map((page) => (
-              <MenuItem
-                key={page}
-                sx={{color: theme.palette.grey.A700}}
-                onClick={(e) => {
-                  e.preventDefault();
-                  navigate(page === "Home" ? "/" : `/${page.toLowerCase()}`);
-                }}>
-                <Typography textAlign="center" sx={{color: theme.palette.grey.A700}} color={theme.palette.grey.A700}>{page}</Typography>
-              </MenuItem>
-            ))}
-          </Menu>
+            Cristin O'Connor
+          </Typography>
+
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" }}}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "left"
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "left"
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: "block", md: "none" },
+              }}
+            >
+              {pages.map((page) => (
+                <MenuItem
+                  key={page}
+                  sx={{color: theme.palette.grey.A700}}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate(page === "Home" ? "/" : `/${page.toLowerCase()}`);
+                  }}>
+                  <Typography textAlign="center" sx={{color: theme.palette.grey.A700}} color={theme.palette.grey.A700}>{page}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+          {/* <Avatar
+            sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
+            src="https://vue.cristin.io/img/square-portrait.d29137a7.png"
+          /> */}
+          <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href=""
+            sx={{
+              mr: 2,
+              display: { xs: "flex", md: "none" },
+              flexGrow: 1,
+              fontFamily: "Pacifico, serif",
+              fontWeight: 700,
+              letterSpacing: ".3rem",
+              textDecoration: "none"
+            }}
+          >
+            Cristin O'Connor
+          </Typography>
         </Box>
-        <Avatar
-          sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
-          src="https://vue.cristin.io/img/square-portrait.d29137a7.png"
-        />
-        <Typography
-          variant="h5"
-          noWrap
-          component="a"
-          href=""
-          sx={{
-            mr: 2,
-            display: { xs: "flex", md: "none" },
-            flexGrow: 1,
-            fontFamily: "Pacifico, serif",
-            fontWeight: 700,
-            letterSpacing: ".3rem",
-            color: theme.palette.grey[100],
-            textDecoration: "none"
-          }}
+
+        <Box
+          sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, width: '100%', justifyContent: 'center'}}
         >
-          Cristin O'Connor
-        </Typography>
-        <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex", color: theme.palette.grey.A700 } }}>
           {pages.map((page) => (
             <Button
               key={page}
               onClick={() => window.location.pathname = page === "Home" ? "/" : `/${page.toLowerCase()}`}
-              sx={{ my: 2, color: theme.palette.grey[100], display: "block" }}
+              sx={{ mx: 1, my: 2, display: "block", color: theme.palette.grey[100], backgroundColor: theme.palette.secondary.main}}
             >
               {page}
             </Button>
