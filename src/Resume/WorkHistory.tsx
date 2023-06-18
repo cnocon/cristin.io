@@ -51,10 +51,11 @@ const WorkHistory: React.FC<{ data: any }> = ({ data }) => {
               <List>
                 {job.honors.map((honor: any, index: number) => {return (
                   <ListItem key={`honor-${index}`} sx={{ display: 'flex', flexWrap: 'wrap', textTransform: 'uppercase', fontWeight: 400}}>
+                    <ListSubheader sx={{lineHeight: 1.25, textTransform: 'none', flexBasis: '100%', marginLeft: '-1rem'}} inset>{honor.detail}</ListSubheader>
                     <ListItemIcon>
                       <EmojiEventsIcon sx={{color: theme.palette.secondary.main}} />
                     </ListItemIcon> {honor.name}
-                    <ListSubheader sx={{lineHeight: 1.25, textTransform: 'none', flexBasis: '100%', marginLeft: '-1rem'}} inset>{honor.detail}</ListSubheader>
+
                   </ListItem>
                 )})}
               </List>

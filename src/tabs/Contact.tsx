@@ -1,14 +1,13 @@
 import { Container, Grid } from "@mui/material"
 import React from "react";
 import GridItem from "@mui/material/Grid";
-
+import SimpleFade from "../SimpleFade";
 
 const Contact = () => {
   return (
-    <Grid>
-      <GridItem>Contact Col 1</GridItem>
-      <GridItem>Contact Col 2</GridItem>
-    </Grid>
+    <SimpleFade>
+      <h1>Hello!</h1>
+    </SimpleFade>
   )
 }
 

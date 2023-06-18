@@ -7,6 +7,7 @@ import Spinner from './Spinner';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Container } from '@mui/material'
 import { useTheme } from '@mui/material/styles';
+import NotFound from "./NotFound"
 
 const App: React.FunctionComponent<{ children?: any }> = ({ children }) => {
   // const theme = useTheme();
@@ -19,18 +20,25 @@ const App: React.FunctionComponent<{ children?: any }> = ({ children }) => {
   if (loading) {
     return <Spinner />
   }
-  return (
-    <BrowserRouter>
-    <Container maxWidth={false}><Container maxWidth="lg" sx={{boxShadow: 0}}><ResponsiveAppBar /></Container></Container>
-    <Page>
-    <Routes>
-      <Route path="/" element= {<Page><p>Home</p></Page>}/>
-      <Route path="/contact" element= {<Contact />}/>
-      <Route path="/resume" element= {<Resume />}/>
-    </Routes>
-    </Page>
-    {children}
-  </BrowserRouter>)
+  return (<BrowserRouter>
+
+        <Container maxWidth={false}>
+          <Container maxWidth="lg" sx={{boxShadow: 0}}>
+            <ResponsiveAppBar />
+          </Container>
+        </Container>
+
+      <Routes>
+        <Route path="/" element= {<Page><p>Home</p></Page>}/>
+        <Route path="/contact" element= {<Contact />}/>
+        <Route path="/resume" element= {<Resume />}/>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      {children}
+
+
+    </BrowserRouter>
+  )
 }
 
 export default App;

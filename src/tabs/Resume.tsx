@@ -1,15 +1,11 @@
 import React from "react";
-import { Typography, Container, Stack } from "@mui/material"
+import { Typography, Container, Stack, Alert } from "@mui/material"
 import Skill from "../Skill";
 import WorkHistory from "../Resume/WorkHistory";
-import styled from "@emotion/styled";
 import EducationHistory from "../Resume/EducationHistory";
 import data from "../data";
 import Courses from "../Courses";
-const StyledTitle = styled.h3`
-
-`
-
+import SimpleFade from "../SimpleFade";
 const Heading: React.FC<{ styles?: any, title: string }> = ({ styles, title }) => {
   const allStyles = Object.assign(styles, {fontFamily: 'Pacifico, script', fontSize: '2rem'});
   return <Typography sx={allStyles}>{title}</Typography>
@@ -17,10 +13,12 @@ const Heading: React.FC<{ styles?: any, title: string }> = ({ styles, title }) =
 
 const Resume = () => {
   if (!data) {
-    return <h1>Problem fetching data</h1>
+    return <Alert variant="standard" color="error">Error: Problem fetching data</Alert>
   }
   return (
+    <SimpleFade>
     <Container maxWidth="lg">
+      {!data ? <Alert variant="standard" color="error">Error: Problem fetching data</Alert> : (
       <Stack
         justifyContent="space-between"
         alignItems="flex-start"
@@ -55,8 +53,9 @@ const Resume = () => {
           <Heading title="Recent Coursework" styles={{marginTop: '3rem'}} />
           <Courses data={data.courses} />
         </Stack>
-      </Stack>
+      </Stack>)}
     </Container>
+    </SimpleFade>
   )
 }
 
