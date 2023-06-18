@@ -4,6 +4,7 @@ import Skill from "../Skill";
 // import GridItem from "@mui/material/Grid";
 import WorkHistory from "../Resume/WorkHistory";
 import styled from "@emotion/styled";
+import EducationHistory from "../Resume/EducationHistory";
 import data from "../data";
 
 const StyledTitle = styled.h3`
@@ -33,7 +34,7 @@ const Resume = () => {
           direction="column"
           justifyContent="flex-start"
           alignItems="flex-start"
-          spacing={1}
+          spacing={4}
           flexBasis={{xs: '100%', md: "60%"}}
         >
           <Heading title="Work History"/* style={{color: theme.palette.primary.dark}} *//>
@@ -44,16 +45,15 @@ const Resume = () => {
           direction="column"
           justifyContent="flex-start"
           alignItems="flex-start"
-          spacing={1}
+          spacing={4}
           flexBasis={{xs: '100%', md: "40%"}}
         >
           <Heading title="Technical Skills" /*style={{color: theme.palette.primary.dark}} *//>
           {data.resume.technicalSkills.map((skill: any, index: any) => {
             return <Skill label={skill.label} percentage={skill.percentage} icon={skill.icon} />
           })}
-          {data.courses.map((course: any, index: any) => {
-            return <h5>{course.description}</h5>
-          })}
+          <Heading title="Education" />
+          <EducationHistory data={data.resume.education} />
         </Stack>
       </Stack>
     </Container>
