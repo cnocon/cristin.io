@@ -6,14 +6,14 @@ import WorkHistory from "../Resume/WorkHistory";
 import styled from "@emotion/styled";
 import EducationHistory from "../Resume/EducationHistory";
 import data from "../data";
-
+import Courses from "../Courses";
 const StyledTitle = styled.h3`
   font-family: Pacifico, script;
   font-size: 2rem;
 `
 
-const Heading = (props: any) => {
-  return <StyledTitle style={props?.style || {}}>{props.title}</StyledTitle>
+const Heading: React.FC<{ style: any, title: string }> = ({ style, title }) => {
+  return <StyledTitle style={style}>{title}</StyledTitle>
 
 }
 const Resume = () => {
@@ -37,7 +37,7 @@ const Resume = () => {
           spacing={4}
           flexBasis={{xs: '100%', md: "60%"}}
         >
-          <Heading title="Work History"/* style={{color: theme.palette.primary.dark}} *//>
+          <Heading title="Work History" style={{marginTop: '4rem'}} />
           <WorkHistory data={data.resume.workHistory} />
         </Stack>
 
@@ -48,12 +48,14 @@ const Resume = () => {
           spacing={4}
           flexBasis={{xs: '100%', md: "40%"}}
         >
-          <Heading title="Technical Skills" /*style={{color: theme.palette.primary.dark}} *//>
+          <Heading title="Technical Skills" style={{marginTop: '4rem'}} />
           {data.resume.technicalSkills.map((skill: any, index: any) => {
             return <Skill label={skill.label} percentage={skill.percentage} icon={skill.icon} />
           })}
-          <Heading title="Education" />
+          <Heading title="Education" style={{marginTop: '4rem'}} />
           <EducationHistory data={data.resume.education} />
+          <Heading title="Recent Coursework" style={{marginTop: '4rem'}} />
+          <Courses data={data.courses} />
         </Stack>
       </Stack>
     </Container>

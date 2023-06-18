@@ -17,7 +17,7 @@ const data = {
       instructor: null,
       completedDate: "03/10/2023",
       certificateUrl: "/advanced-javascript-certificate.pdf",
-      description: "Occaecat ea minim excepteur commodo exercitation laboris velit do. Culpa nisi elit eu labore aliqua ex anim.",
+      description: "Advanced JavaScript for engineers.",
       imageUrl: "https://ui.dev/images/advanced-javascript-logo.svg",
       color: "theme.palette.primary.main",
       backgroundColor: "theme.palette.secondary.main"
@@ -30,7 +30,7 @@ const data = {
       instructor: null,
       completedDate: "In Progress",
       certificateUrl: null,
-      description: "Anim ipsum excepteur adipisicing aliquip nulla pariatur exercitation aute consequat commodo officia veniam aliquip culpa. Culpa nisi elit eu labore aliqua ex anim. Adipisicing qui ea esse velit anim in do commodo nulla elit id. Fugiat do do tempor reprehenderit.",
+      description: "Acquire advanced understanding of the various React hooks and their nuances.",
       imageUrl: "https://ui.dev/images/hook.svg",
       color: "theme.palette.secondary.main",
       backgroundColor: "theme.palette.primary.main"
@@ -43,7 +43,7 @@ const data = {
       instructor: null,
       completedDate: "02/18/2023",
       certificateUrl: "/redux-certificate.pdf",
-      description: "Culpa nisi elit eu labore aliqua ex anim. Adipisicing qui ea esse velit anim in do commodo nulla elit id. Fugiat do do tempor reprehenderit.",
+      description: "Develop a deeper understanding of Redux.",
       imageUrl: "https://ui.dev/images/redux-logo.svg",
       color: "theme.palette.primary.main",
       backgroundColor: "theme.palette.secondary.main"
