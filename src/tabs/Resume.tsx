@@ -1,7 +1,6 @@
 import React from "react";
-import { Container, Stack, useTheme } from "@mui/material"
+import { Container, Stack } from "@mui/material"
 import Skill from "../Skill";
-// import GridItem from "@mui/material/Grid";
 import WorkHistory from "../Resume/WorkHistory";
 import styled from "@emotion/styled";
 import EducationHistory from "../Resume/EducationHistory";
@@ -12,12 +11,12 @@ const StyledTitle = styled.h3`
   font-size: 2rem;
 `
 
-const Heading: React.FC<{ style: any, title: string }> = ({ style, title }) => {
-  return <StyledTitle style={style}>{title}</StyledTitle>
-
+const Heading: React.FC<{ styles?: any, title: string }> = ({ styles, title }) => {
+  const allStyles = {style: styles} || {};
+  return <StyledTitle {...allStyles}>{title}</StyledTitle>
 }
+
 const Resume = () => {
-  const theme = useTheme();
   if (!data) {
     return <h1>Problem fetching data</h1>
   }
@@ -37,7 +36,7 @@ const Resume = () => {
           spacing={4}
           flexBasis={{xs: '100%', md: "60%"}}
         >
-          <Heading title="Work History" style={{marginTop: '4rem'}} />
+          <Heading title="Work History" styles={{marginTop: '3rem'}} />
           <WorkHistory data={data.resume.workHistory} />
         </Stack>
 
@@ -48,13 +47,13 @@ const Resume = () => {
           spacing={4}
           flexBasis={{xs: '100%', md: "40%"}}
         >
-          <Heading title="Technical Skills" style={{marginTop: '4rem'}} />
+          <Heading title="Technical Skills" styles={{marginTop: '3rem'}} />
           {data.resume.technicalSkills.map((skill: any, index: any) => {
-            return <Skill label={skill.label} percentage={skill.percentage} icon={skill.icon} />
+            return <Skill label={skill.label} percentage={skill.percentage} icon={skill.icon} key={skill.label} />
           })}
-          <Heading title="Education" style={{marginTop: '4rem'}} />
+          <Heading title="Education" styles={{marginTop: '3rem'}} />
           <EducationHistory data={data.resume.education} />
-          <Heading title="Recent Coursework" style={{marginTop: '4rem'}} />
+          <Heading title="Recent Coursework" styles={{marginTop: '3rem'}} />
           <Courses data={data.courses} />
         </Stack>
       </Stack>

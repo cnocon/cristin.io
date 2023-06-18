@@ -8,7 +8,7 @@ const EducationHistory: React.FC<{ data: any }> = ({ data }) => {
 
   return data.map((edu: any, index: number) => {
     return (
-      <Card key={`edu-${index}`} sx={{width: '100%'}}>
+      <Card key={`edu-${index}`} sx={{width: '100%', boxShadow: 0}}>
         <CardHeader
           title={edu.title}
           titleTypographyProps={{fontFamily: 'Oswald, serif', fontWeight: 500, textTransform: 'uppercase'}}
