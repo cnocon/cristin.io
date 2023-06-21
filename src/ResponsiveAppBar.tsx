@@ -11,6 +11,7 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { useTheme } from "@mui/material"
+import SquarePortrait from "./images/square-portrait.png";
 
 const pages = ["Resume"];
 
@@ -36,7 +37,7 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
         <Box sx={{flexBasis: "100%", display: 'flex', flexWrap: {xs: 'nowrap', md: 'wrap', justifyContent: 'center', alignItems: 'center'} }}>
           <Avatar
             sx={{ display: { xs: "none", md: "flex" }, flexBasis: '100px', height: '100px', bgcolor: theme.palette.grey[100], border: `6px solid ${theme.palette.secondary.main}`, borderRadius: '50%', overflow: 'hidden', mx: 'auto', justifyContent: 'center'}}
-            src="https://vue.cristin.io/img/square-portrait.d29137a7.png"
+            src={SquarePortrait}
           />
           <Typography
             variant="h1"

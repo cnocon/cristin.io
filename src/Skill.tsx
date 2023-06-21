@@ -1,10 +1,12 @@
 /* eslint-disable react/style-prop-object */
-import { useTheme } from "@mui/material"
 import React from "react";
+import { useTheme } from "@mui/material"
+import { iconDictionary } from "./constants";
 
 const Skill = (props: any) => {
   const theme = useTheme();
-  const { label, percentage, icon: Icon } = props;
+  const { label, percentage, icon } = props;
+  const Icon = iconDictionary[icon];
   return (
     <div style={{width: '100%', paddingTop: 0, marginTop: 0}}>
     <div
@@ -19,10 +21,17 @@ const Skill = (props: any) => {
         fontFamily: 'Oswald, Impact, sans-serif',
         textTransform: 'uppercase',
         height: '50px',
-        // color: theme.palette.primary.dark
       }}
     >
-      <Icon style={{height: 'auto', maxWidth: '100%', width: '28px', marginRight: '6px'}}/> {label} <div style={{
+      <Icon style={{
+        height: 'auto',
+        maxWidth: '100%',
+        width: '28px',
+        marginRight: '6px'}}
+      />
+
+      {label}
+      <div style={{
         position: 'absolute',
         right: 0,
         bottom: '-6px',
@@ -36,8 +45,8 @@ const Skill = (props: any) => {
         fontFamily: 'Lato, Verdana, sans-serif',
         borderBottomLeftRadius: '0 !important',
         borderBottomRightRadius: '0 !important',
-        backgroundColor: theme.palette.primary.dark,
-        color: theme.palette.grey[100],
+        backgroundColor: theme.palette.primary.main,
+        color: theme.palette.getContrastText(theme.palette.primary.main)
       }}
       >
         {percentage}%

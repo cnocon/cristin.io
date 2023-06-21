@@ -17,7 +17,7 @@ const data = {
       title: "Advanced JavaScript",
       url: "https://ui.dev/advanced-javascript",
       platform: "ui.dev",
-      Icon: JavascriptIcon,
+      Icon: "JavascriptIcon",
       instructor: null,
       completedDate: "03/10/2023",
       certificateUrl: "/advanced-javascript-certificate.pdf",
@@ -30,7 +30,7 @@ const data = {
       title: "React Hooks",
       url: "https://ui.dev/react-hooks",
       platform: "ui.dev",
-      Icon: PhishingIcon,
+      Icon: "PhishingIcon",
       instructor: null,
       completedDate: "In Progress",
       certificateUrl: null,
@@ -43,7 +43,7 @@ const data = {
       title: "Redux",
       url: "https://ui.dev/c/redux/introduction-philosophy-and-tips",
       platform: "ui.dev",
-      Icon: AccountTreeSharp,
+      Icon: "AccountTreeSharp",
       instructor: null,
       completedDate: "02/18/2023",
       certificateUrl: "/redux-certificate.pdf",
@@ -90,37 +90,37 @@ const data = {
       {
         label: "JavaScript",
         percentage: 80,
-        icon: DataObjectSharpIcon
+        icon: "DataObjectSharpIcon"
       },
       {
         label: "React",
         percentage: 75,
-        icon: CodeIcon
+        icon: "CodeIcon"
       },
       {
         label: "SCSS, LESS, CSS",
         percentage: 72,
-        icon: CssIcon
+        icon: "CssIcon"
       },
       {
         label: "Responsive Web Development",
         percentage: 70,
-        icon: MobileFriendlyIcon
+        icon: "MobileFriendlyIcon"
       },
       {
         label: "Git",
         percentage: 70,
-        icon: GitHubIcon
+        icon: "GitHubIcon"
       },
       {
         label: "a11y",
         percentage: 65,
-        icon: AccessibilityIcon
+        icon: "AccessibilityIcon"
       },
       {
         label: "TypeScript",
         percentage: 50,
-        icon: DataArrayIcon
+        icon: "DataArrayIcon"
       }
     ],
     softSkills: [ "Empathy to be an effective teammate", "Organizational abilities for managing projects independently", "Research skills to find the best solutions", "Enthusiasm and passion for front end work", "Positive attitude and willingness to handle a wide variety of responsibilities", "Effective communicator with people from varying technical backgrounds", "Dedicated to ongoing professional development", "5+ years of Agile experience", "12+ years of experience working on web applications in various capacities" ],

@@ -24,15 +24,15 @@ const App: React.FunctionComponent<{ children?: any }> = ({ children }) => {
   return (
     <BrowserRouter>
       <Stack direction="column">
-        <Container maxWidth={false} sx={{backgroundColor: theme.palette.primary.dark, boxShadow: 3, pt: 2, pb: 4}}>
+        <Container maxWidth={false} sx={{backgroundColor: theme.palette.primary.main, boxShadow: 3, pt: 2, pb: 4}}>
           <Container maxWidth="lg" sx={{boxShadow: 0}}>
             <ResponsiveAppBar />
           </Container>
         </Container>
 
       <Routes>
-        <Route path="/" element= {<Contact />}/>
-        <Route path="/resume" element= {<Resume />}/>
+        {/* <Route path="/" element= {<Contact />}/> */}
+        <Route path="/" element= {<Resume />}/>
         <Route path="*" element={<NotFound />} />
       </Routes>
       <div className="content">{children}</div>
