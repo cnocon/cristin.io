@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ResponsiveAppBar from './ResponsiveAppBar';
+import Header from './Header';
 import Resume from './tabs/Resume';
 import Contact from './tabs/Contact';
 import Spinner from './Spinner';
@@ -24,14 +24,10 @@ const App: React.FunctionComponent<{ children?: any }> = ({ children }) => {
   return (
     <BrowserRouter>
       <Stack direction="column">
-        <Container maxWidth={false} sx={{backgroundColor: theme.palette.primary.main, boxShadow: 3, pt: 2, pb: 4}}>
-          <Container maxWidth="lg" sx={{boxShadow: 0}}>
-            <ResponsiveAppBar />
-          </Container>
-        </Container>
+        <Header />
 
       <Routes>
-        {/* <Route path="/" element= {<Contact />}/> */}
+        <Route path="/contact" element= {<Contact />}/>
         <Route path="/" element= {<Resume />}/>
         <Route path="*" element={<NotFound />} />
       </Routes>

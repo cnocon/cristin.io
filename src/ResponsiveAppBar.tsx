@@ -13,7 +13,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { useTheme } from "@mui/material"
 import SquarePortrait from "./images/square-portrait.png";
 
-const pages = ["Resume"];
+const pages = ["Resume","Contact"];
 
 const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
   const theme = useTheme();
@@ -126,7 +126,7 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
           </Typography>
         </Box>
 
-        {/* <Box
+        <Box
           sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, width: '100%', justifyContent: 'center'}}
         >
           {pages.map((page) => (
@@ -134,13 +134,13 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
               key={page}
               variant="contained"
               color="secondary"
-              onClick={() => window.location.pathname = page === "Home" ? "/" : `/${page.toLowerCase()}`}
+              onClick={() => window.location.pathname = page === "Resume" ? "/" : `/${page.toLowerCase()}`}
               sx={{ mx: 1, my: 2}}
             >
               {page}
             </Button>
           ))}
-        </Box> */}
+        </Box>
 
         <Box sx={{ flexGrow: 0 }}></Box>
 

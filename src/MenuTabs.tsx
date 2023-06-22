@@ -13,7 +13,7 @@ export const StyledTab = styled(Tab)`
 `
 
 export default function MenuTabs() {
-  const [activeNav, setActiveNav] = React.useState("/resume");
+  const [activeNav, setActiveNav] = React.useState("/");
   const navigate = useNavigate();
 
 

@@ -6,7 +6,7 @@ const Contact = () => {
 
     <Container maxWidth="lg" sx={{padding: 4, minHeight: '100%'}}>
       <Stack direction="row" sx={{flexWrap: "wrap"}}>
-        <Typography variant="h2" sx={{flexBasis: '100%'}}>Contact Me</Typography>
+        <Typography variant="h2" sx={{flexBasis: '100%'}}>Hi, there!</Typography>
         <List sx={{flexBasis: '100%'}}>
           <ListItem>Email: <Link href="mailto:her@cristin.io">her@cristin.io</Link></ListItem>
           <ListItem>Website: <Link href="https://cristin.io">cristin.io</Link></ListItem>
