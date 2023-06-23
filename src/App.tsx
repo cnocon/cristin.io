@@ -36,8 +36,8 @@ const App: React.FunctionComponent<{ children?: any }> = ({ children }) => {
       <Stack direction="column">
         <Header />
         <Routes>
-          <Route path="/contact" element= {<Contact />}/>
-          <Route path="/" element= {<Resume />}/>
+          <Route path="/contact" element={<Contact />}/>
+          <Route path="/" element={<Resume />}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
         <div className='content'>{children}</div>
