@@ -15,13 +15,13 @@ let newTheme = createTheme({
   palette: {
     primary: {
       main: 'hsl(216, 80%, 41%)',
-      light: 'hsl(216, 100%, 90%)',
+      light: 'hsl(216, 100%, 96%)',
       dark: 'hsl(216, 70%,26%)',
       contrastText: '#fff',
     },
     secondary: {
       main: 'hsl(45, 85%, 50%)',
-      light: 'hsl(45, 100%, 91%)',
+      light: 'hsl(45, 100%, 85%)',
       dark: 'hsl(45, 100%, 25%)',
       contrastText: '#000',
     }

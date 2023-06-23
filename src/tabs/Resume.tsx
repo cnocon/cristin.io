@@ -8,8 +8,8 @@ import Courses from "../Courses";
 
 const Heading: React.FC<{ styles?: any, title: string }> = ({ styles, title }) => {
   const theme = useTheme()
-  const allStyles = Object.assign(styles || {}, {fontFamily: 'Pacifico, script', fontSize: '2rem', margin: '3rem auto 0 !important', color: theme.palette.text.primary});
-  return <Typography sx={allStyles || {}}>{title}</Typography>
+  const allStyles = Object.assign(styles || {}, {fontFamily: 'Pacifico, script', fontSize: '2rem', marginLeft: 'auto !important', marginRight: 'auto !important', color: theme.palette.text.primary});
+  return <Typography variant="h3" sx={allStyles || {}}>{title}</Typography>
 }
 
 const Resume = () => {
@@ -17,9 +17,9 @@ const Resume = () => {
     return <Alert variant="standard" color="error">Error: Problem fetching data</Alert>
   }
   return (
-
       !data ? <Container maxWidth="lg"><Alert variant="standard" color="error">Error: Problem fetching data</Alert></Container> : (
       <Container maxWidth="lg" sx={{mb: 8}}>
+        <Typography variant="h2" sx={{fontSize: '1.5rem', fontFamily: "Oswald",my: 4}}>Home &gt; Resume</Typography>
       <Stack
         justifyContent="space-between"
         alignItems="flex-start"

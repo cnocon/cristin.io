@@ -13,7 +13,10 @@ import MenuItem from "@mui/material/MenuItem";
 import { useTheme } from "@mui/material"
 import SquarePortrait from "./images/square-portrait.png";
 
-const pages = ["Resume","Contact"];
+const pages = [
+  {name: "Resume", path: "/"},
+  {name: "Contact", path: "/contact"}
+]
 
 const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
   const theme = useTheme();
@@ -89,30 +92,25 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
+              {pages.map(({ name, path }) => (
                 <MenuItem
-                  key={page}
+                  key={`nav-${name}`}
                   sx={{color: theme.palette.grey.A700}}
                   onClick={(e) => {
-                    e.preventDefault();
-                    navigate(page === "Home" ? "/" : `/${page.toLowerCase()}`);
+                    navigate(path);
                   }}>
-                  <Typography textAlign="center" sx={{color: theme.palette.grey.A700}} color={theme.palette.grey.A700}>{page}</Typography>
+                  <Typography textAlign="center" sx={{color: theme.palette.grey.A700}} color={theme.palette.grey.A700}>{name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          {/* <Avatar
-            sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
-            src="https://vue.cristin.io/img/square-portrait.d29137a7.png"
-          /> */}
           <Typography
             variant="h5"
             noWrap
             component="a"
             href=""
             sx={{
-              mr: 2,
+              mr: {xs: 0, md: 2},
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
               fontFamily: "Pacifico, serif",
@@ -129,15 +127,17 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
         <Box
           sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, width: '100%', justifyContent: 'center'}}
         >
-          {pages.map((page) => (
+          {pages.map(({ name, path }) => (
             <Button
-              key={page}
+              key={`desktop-nav-${name}`}
               variant="contained"
+              onClick={(e) => {
+                navigate(path);
+              }}
               color="secondary"
-              onClick={() => window.location.pathname = page === "Resume" ? "/" : `/${page.toLowerCase()}`}
               sx={{ mx: 1, my: 2, boxShadow: 0}}
             >
-              {page}
+              {name}
             </Button>
           ))}
         </Box>

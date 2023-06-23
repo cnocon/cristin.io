@@ -24,6 +24,16 @@ const data = {
     link: "https://cristin.io",
     value: "cristin.io",
     icon: "RssFeedIcon"
+  }, {
+    label: "Codepen",
+    link: "https://codepen.io/cnocon",
+    value: "cnocon",
+    icon: "CodeIcon"
+  }, {
+    label: "GitHub",
+    link: "https:/https://github.com/cnocon",
+    value: "cnocon",
+    icon: "GitHubIcon"
   } ],
   courses: [
     {
