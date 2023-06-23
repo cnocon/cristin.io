@@ -135,7 +135,7 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
               variant="contained"
               color="secondary"
               onClick={() => window.location.pathname = page === "Resume" ? "/" : `/${page.toLowerCase()}`}
-              sx={{ mx: 1, my: 2}}
+              sx={{ mx: 1, my: 2, boxShadow: 0}}
             >
               {page}
             </Button>

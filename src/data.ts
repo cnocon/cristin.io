@@ -1,17 +1,30 @@
-import JavascriptIcon from '@mui/icons-material/Javascript'
-import DataObjectSharpIcon from '@mui/icons-material/DataObjectSharp'
-import CodeOutlinedIcon from '@mui/icons-material/CodeOutlined'
-import CssIcon from '@mui/icons-material/Css'
-import SchemaSharpIcon from '@mui/icons-material/SchemaSharp'
-import DataArrayIcon from '@mui/icons-material/DataArray'
-import MobileFriendlyIcon from '@mui/icons-material/MobileFriendly'
-import GitHubIcon from '@mui/icons-material/GitHub'
-import AccessibilityIcon from '@mui/icons-material/Accessibility'
-import DataObjectIcon from '@mui/icons-material/DataObject'
-import CodeIcon from '@mui/icons-material/Code'
-import PhishingIcon from '@mui/icons-material/Phishing'
-import { AccountTreeSharp } from '@mui/icons-material'
 const data = {
+  contact: [ {
+    label: "Email",
+    value: "her@cristin.io",
+    link: "mailto:her@cristin.io",
+    icon: "AlternateEmailIcon"
+  }, {
+    label: "LinkedIn",
+    link: "https://www.linkedin.com/in/cristinoconnor",
+    value: "cristinoconnor",
+    icon: "LinkedInIcon"
+  }, {
+    label: "Twitter",
+    link: "https://twitter.com/cnocon",
+    value: "@cnocon",
+    icon: "TwitterIcon"
+  }, {
+    label: "Website",
+    link: "https://cristinoconnor.com",
+    value: "cristinoconnor.com",
+    icon: "LanguageIcon"
+  }, {
+    label: "Blog",
+    link: "https://cristin.io",
+    value: "cristin.io",
+    icon: "RssFeedIcon"
+  } ],
   courses: [
     {
       title: "Advanced JavaScript",

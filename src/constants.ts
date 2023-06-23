@@ -11,6 +11,11 @@ import DataObjectIcon from '@mui/icons-material/DataObject'
 import CodeIcon from '@mui/icons-material/Code'
 import PhishingIcon from '@mui/icons-material/Phishing'
 import AccountTreeSharp from '@mui/icons-material/AccountTreeSharp'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import TwitterIcon from '@mui/icons-material/Twitter'
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
+import LanguageIcon from '@mui/icons-material/Language'
+import RssFeedIcon from '@mui/icons-material/RssFeed'
 
 export const iconDictionary: any = {
   "JavascriptIcon": JavascriptIcon,
@@ -26,4 +31,9 @@ export const iconDictionary: any = {
   "CodeIcon": CodeIcon,
   "PhishingIcon": PhishingIcon,
   "AccountTreeSharp": AccountTreeSharp,
+  "LinkedInIcon": LinkedInIcon,
+  "TwitterIcon": TwitterIcon,
+  "AlternateEmailIcon": AlternateEmailIcon,
+  "LanguageIcon": LanguageIcon,
+  "RssFeedIcon": RssFeedIcon
 }

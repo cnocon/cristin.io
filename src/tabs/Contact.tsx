@@ -1,18 +1,47 @@
 import React from "react";
-import { Container, Link, List, ListItem, Stack, Typography } from "@mui/material";
+import { Card, CardContent, CardHeader, Container, Link, List, ListItem, Stack, Typography, useTheme, Paper, CardActionArea } from "@mui/material";
+import data from "../data";
+import { iconDictionary } from "../constants";
 
 const Contact = () => {
+  const theme = useTheme();
   return (
+    <Container maxWidth="lg" sx={{mt: {xs: 2, md: 4, lg: 8}}}>
+      <Stack direction="row" justifyContent="center" spacing={4} flexWrap="wrap" useFlexGap>
+        {data.contact.map((contact) => {
+          const { label, link, value, icon } = contact;
+          const ContactIcon = iconDictionary[icon];
+          return <Card
+            variant="outlined"
+            key={label}
+            sx={{
+              flexBasis: {xs: '100%', md: 'calc(50% - 32px)'},
+              display: 'flex',
+              justifyContent: 'center',
+              bgcolor: theme.palette.grey[100]
+            }}
+          >
+            <CardActionArea>
+            <Link href={link} target="_blank" sx={{textDecoration: 'none'}}>
+            <CardHeader
+              title={
+                <>
+                  <ContactIcon
+                    sx={{width: '100%'}}
+                  />
+                  {label}
+</>
+              }
+              subheader={
 
-    <Container maxWidth="lg" sx={{padding: 4, minHeight: '100%'}}>
-      <Stack direction="row" sx={{flexWrap: "wrap"}}>
-        <Typography variant="h2" sx={{flexBasis: '100%'}}>Hi, there!</Typography>
-        <List sx={{flexBasis: '100%'}}>
-          <ListItem>Email: <Link href="mailto:her@cristin.io">her@cristin.io</Link></ListItem>
-          <ListItem>Website: <Link href="https://cristin.io">cristin.io</Link></ListItem>
-          <ListItem>LinkedIn: <Link href="https://www.linkedin.com/in/cristinoconnor/">cristinoconnor</Link></ListItem>
-          <ListItem>Twitter: <Link href="https://twitter.com/cnocon/">@cnocon</Link></ListItem>
-        </List>
+                  value
+              }
+              sx={{textAlign: 'center'}}
+            />
+            </Link>
+            </CardActionArea>
+          </Card>
+        })}
       </Stack>
     </Container>
   )
