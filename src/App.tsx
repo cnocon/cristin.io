@@ -17,7 +17,7 @@ const App: React.FunctionComponent<{ children?: any }> = ({ children }) => {
           <Route path="/" element={<Resume />}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Box>{children}</Box>
+        <Box className="content">{children}</Box>
       </Stack>
       <Footer />
     </BrowserRouter>

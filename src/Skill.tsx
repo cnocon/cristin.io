@@ -21,6 +21,7 @@ const Skill = (props: any) => {
         fontFamily: 'Oswald, Impact, sans-serif',
         textTransform: 'uppercase',
         height: '50px',
+        fontSize: '14px'
       }}
     >
       <Icon style={{
@@ -42,7 +43,7 @@ const Skill = (props: any) => {
         height: '32px',
         fontWeight: 700,
         padding: '3px 5px',
-        fontSize: '1rem',
+        fontSize: '14px',
         fontFamily: 'Lato, Verdana, sans-serif',
         borderBottomLeftRadius: '0 !important',
         borderBottomRightRadius: '0 !important',

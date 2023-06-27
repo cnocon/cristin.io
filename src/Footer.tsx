@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   const newDate = new Date();
 
   return (
-    <Container maxWidth={false} sx={{px: 4, py: 4, bgcolor: theme.palette.grey[100], color: theme.palette.getContrastText(theme.palette.grey[100]), position: "absolute", top: "100%"}} className="footer-container">
+    <Container maxWidth={false} sx={{bgcolor: theme.palette.grey[100], color: theme.palette.getContrastText(theme.palette.grey[300])}} className="footer-container">
       <Container maxWidth="lg" sx={{boxShadow: 0, bgcolor: "inherit"}}>
         <footer>
           <Typography variant="h6" sx={{color: theme.palette.getContrastText(theme.palette.grey[100])}}>&copy; {`${newDate.getUTCFullYear()}`} Cristin O'Connor</Typography>
