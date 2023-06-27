@@ -20,37 +20,31 @@ const Contact = () => {
               flexBasis: {xs: '100%', sm: 'calc(100% - 32px)', md: 'calc(25% - 32px)'},
               boxShadow: 3,
               display: 'flex',
-              bgcolor: theme.palette.primary.dark,
+              bgcolor: theme.palette.primary.light,
               padding: 0,
-              color: theme.palette.getContrastText(theme.palette.primary.dark),
+              color: theme.palette.getContrastText(theme.palette.primary.light),
               '&:hover': {
-                color: theme.palette.getContrastText(theme.palette.primary.light),
-                bgcolor: theme.palette.primary.light
+                color: theme.palette.getContrastText(theme.palette.primary.dark),
+                bgcolor: theme.palette.primary.dark,
               }
             }}
           >
             <CardActionArea>
-              <Link href={link} target="_blank" sx={{textDecoration: 'none', color: 'inherit', bgcolor: 'inherit' }}>
+              <Link href={link} target="_blank" sx={{textDecoration: 'none', color: 'inherit'}}>
               <CardHeader
                 title={<>
                   <Box style={{width: '100%'}}>
                     <ContactIcon
-                      sx={{border: '2px solid ' + theme.palette.primary.light, color: theme.palette.secondary.main, backgroundColor: theme.palette.primary.dark, width: '50px', height: '50px', borderRadius: '50%', padding: '10px'}}
+                      sx={{border: '2px solid ' + theme.palette.secondary.main, color: theme.palette.secondary.main, backgroundColor: theme.palette.primary.dark, width: '50px', height: '50px', borderRadius: '50%', padding: '10px'}}
                     />
                   </Box>
                     {label}
                   </>
                 }
                 subheader={value}
-                sx={{color: "inherit", textAlign: 'center', display: 'flex', '&:hover': {
-                  background: theme.palette.primary.light,
-                  color: theme.palette.getContrastText(theme.palette.primary.light)
-                }}}
-                titleTypographyProps={{color: "inherit",
-                '&:hover': {
-                  background: theme.palette.primary.light,
-                  color: theme.palette.getContrastText(theme.palette.primary.light)
-                }}}
+                sx={{color: "inherit", textAlign: 'center', display: 'flex'
+                }}
+                titleTypographyProps={{color: "inherit"}}
                 subheaderTypographyProps={{color: "inherit"}}
               />
               </Link>
