@@ -7,7 +7,7 @@ const Contact = () => {
   const theme = useTheme();
   return (
     <Container maxWidth="lg">
-      <Typography variant="h2" sx={{fontSize: '1.5rem', fontFamily: "Oswald",my: 4}}>Home &gt; Contact</Typography>
+      <Typography sx={{fontWeight: 300, fontFamily: "Oswald, Impact, sans-serif", mb: 4}}>Home &gt; Contact</Typography>
       <Stack direction="row" justifyContent="flex-start" spacing={4} flexWrap="wrap" useFlexGap>
         {data.contact.map((contact) => {
           const { label, link, value, icon } = contact;

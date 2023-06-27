@@ -95,7 +95,7 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
               {pages.map(({ name, path }) => (
                 <MenuItem
                   key={`nav-${name}`}
-                  sx={{color: theme.palette.grey.A700}}
+                  sx={{color: theme.palette.getContrastText(theme.palette.grey[100])}}
                   onClick={(e) => {
                     navigate(path);
                   }}>

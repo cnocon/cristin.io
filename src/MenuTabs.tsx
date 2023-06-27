@@ -25,7 +25,6 @@ export default function MenuTabs() {
   const boxprops: any = {sx: { borderBottom: 1, borderColor: 'divider' }}
 
   React.useEffect(() => {
-    console.log("activeNav", activeNav);
     navigate(`/${activeNav}`);
   }, [activeNav])
 
