@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Stack, Alert, Container, useTheme } from "@mui/material"
+import { Typography, Stack, Alert, Container, useTheme, Box } from "@mui/material"
 import Skill from "../Skill";
 import WorkHistory from "../Resume/WorkHistory";
 import EducationHistory from "../Resume/EducationHistory";
@@ -13,6 +13,7 @@ const Heading: React.FC<{ styles?: any, title: string }> = ({ styles, title }) =
 }
 
 const Resume = () => {
+  const theme = useTheme()
   if (!data) {
     return <Alert variant="standard" color="error">Error: Problem fetching data</Alert>
   }
@@ -45,10 +46,12 @@ const Resume = () => {
           spacing={4}
           flexBasis={{xs: '100%', md: "40%"}}
         >
-          <Heading title="Technical Skills" />
-          {data.resume.technicalSkills.map((skill: any, index: any) => {
-            return <Skill label={skill.label} percentage={skill.percentage} icon={skill.icon} key={skill.label} />
-          })}
+
+            <Heading title="Technical Skills" />
+            {data.resume.technicalSkills.map((skill: any, index: any) => {
+              return <Skill label={skill.label} percentage={skill.percentage} icon={skill.icon} key={skill.label} />
+            })}
+
           <Heading title="Education" />
           <EducationHistory data={data.resume.education} />
           <Heading title="Recent Coursework" />

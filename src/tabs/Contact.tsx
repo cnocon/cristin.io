@@ -16,10 +16,11 @@ const Contact = () => {
             variant="outlined"
             key={label}
             sx={{
-              flexBasis: {xs: '100%', md: 'calc(33% - 32px)'},
+              flexBasis: {xs: '100%', md: 'calc(33% - 32px)', lg: 'calc(25% - 32px)'},
               display: 'flex',
               justifyContent: 'center',
-              bgcolor: theme.palette.grey[100]
+              bgcolor: theme.palette.primary.dark,
+              padding: 0
             }}
           >
             <CardActionArea>
@@ -28,7 +29,7 @@ const Contact = () => {
                 title={<>
                   <Box style={{width: '100%'}}>
                     <ContactIcon
-                      sx={{border: '4px solid ' + theme.palette.secondary.main, color: theme.palette.secondary.main, backgroundColor: theme.palette.primary.main, width: '60px', height: '60px', borderRadius: '50%', padding: '10px'}}
+                      sx={{border: '4px solid ' + theme.palette.primary.light, color: theme.palette.secondary.main, backgroundColor: theme.palette.primary.dark, width: '60px', height: '60px', borderRadius: '50%', padding: '10px'}}
                     />
                   </Box>
                     {label}
@@ -36,7 +37,8 @@ const Contact = () => {
                 }
                 subheader={value}
                 sx={{textAlign: 'center', display: 'flex', height: '260px'}}
-                titleTypographyProps={{color: theme.palette.text.primary}}
+                titleTypographyProps={{color: theme.palette.getContrastText(theme.palette.primary.main)}}
+                subheaderTypographyProps={{color: theme.palette.getContrastText(theme.palette.primary.main)}}
               />
               </Link>
             </CardActionArea>

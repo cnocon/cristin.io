@@ -57,7 +57,7 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
               letterSpacing: ".3rem",
               textDecoration: "none",
               fontSize: "3.5rem",
-              color: theme.palette.getContrastText(theme.palette.primary.dark)
+              color: theme.palette.getContrastText(theme.palette.grey[100])
             }}
           >
             Cristin O'Connor
@@ -70,7 +70,7 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              sx={{color: theme.palette.getContrastText(theme.palette.primary.dark)}}
+              sx={{color: theme.palette.getContrastText(theme.palette.grey[100])}}
             >
               <MenuIcon />
             </IconButton>
@@ -99,7 +99,7 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
                   onClick={(e) => {
                     navigate(path);
                   }}>
-                  <Typography textAlign="center" sx={{color: theme.palette.grey.A700}} color={theme.palette.grey.A700}>{name}</Typography>
+                  <Typography textAlign="center" sx={{color: theme.palette.getContrastText(theme.palette.grey[100])}} color={theme.palette.getContrastText(theme.palette.grey[100])}>{name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -117,7 +117,7 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
               fontWeight: 700,
               letterSpacing: ".3rem",
               textDecoration: "none",
-              color: theme.palette.getContrastText(theme.palette.primary.dark)
+              color: theme.palette.getContrastText(theme.palette.grey[100])
             }}
           >
             Cristin O'Connor
