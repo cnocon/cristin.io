@@ -39,7 +39,7 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
       <Toolbar sx={{mt: 4, mb: 2, flexWrap: 'wrap', justifyContent: 'center'}}>
         <Box sx={{flexBasis: "100%", display: 'flex', flexWrap: {xs: 'nowrap', md: 'wrap', justifyContent: 'center', alignItems: 'center'} }}>
           <Avatar
-            sx={{ display: { xs: "none", md: "flex" }, flexBasis: '100px', height: '100px', bgcolor: theme.palette.grey[100], border: `6px solid ${theme.palette.secondary.main}`, borderRadius: '50%', overflow: 'hidden', mx: 'auto', justifyContent: 'center'}}
+            sx={{ display: { xs: "none", md: "flex" }, flexBasis: '100px', height: '100px', bgcolor: theme.palette.grey[100], border: `4px solid ${theme.palette.secondary.main}`, borderRadius: '50%', overflow: 'hidden', mx: 'auto', justifyContent: 'center'}}
             src={SquarePortrait}
           />
           <Typography
@@ -130,12 +130,12 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
           {pages.map(({ name, path }) => (
             <Button
               key={`desktop-nav-${name}`}
-              variant="contained"
+              variant="outlined"
               onClick={(e) => {
                 navigate(path);
               }}
               color="secondary"
-              sx={{ mx: 1, my: 2, boxShadow: 0}}
+              sx={{ mx: 1, my: 2, boxShadow: 0, fontFamily: 'Oswald, Impact, sans-serif', color: theme.palette.text.primary}}
             >
               {name}
             </Button>

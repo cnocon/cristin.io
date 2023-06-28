@@ -2,30 +2,32 @@ import React from "react";
 import { Card, CardHeader, Container, Link, Stack, Typography, useTheme, CardActionArea, Box } from "@mui/material";
 import data from "../data";
 import { iconDictionary } from "../constants";
-
+import PageHeader from "./PageHeader";
 const Contact = () => {
   const theme = useTheme();
   return (
     <Container maxWidth="lg">
-      <Typography sx={{fontWeight: 300, fontFamily: "Oswald, Impact, sans-serif", mb: 4}}>Home &gt; Contact</Typography>
-      <Stack direction="row" justifyContent="flex-start" spacing={5} flexWrap="wrap" useFlexGap>
+      <PageHeader title="Home &gt; Contact" />
+      <Stack direction="row" justifyContent="center" spacing={0} flexWrap="wrap" useFlexGap>
         {data.contact.map((contact) => {
           const { label, link, value, icon } = contact;
           const ContactIcon = iconDictionary[icon];
           return <Card
-            variant="outlined"
             key={label}
             sx={{
-              height: {xs: 'auto', md: '268px'},
-              flexBasis: {xs: '100%', sm: 'calc(100% - 32px)', md: 'calc(25% - 32px)'},
-              boxShadow: 3,
+              height: {xs: 'auto', md: 'auto'},
+              flexBasis: {xs: '100%', sm: 'calc(100% - 32px)', md: 'calc(25% - 32px)', lg: 'calc(17% - 32px)'},
               display: 'flex',
-              bgcolor: theme.palette.primary.light,
+              borderRadius: '4px',
+              bgcolor: 'transparent',//theme.palette.primary.light,
+              boxShadow: 0,
               padding: 0,
               color: theme.palette.getContrastText(theme.palette.primary.light),
+              transform: 'background-color',
+              transition: 'ease .2s',
               '&:hover': {
-                color: theme.palette.getContrastText(theme.palette.primary.dark),
-                bgcolor: theme.palette.primary.dark,
+                color: theme.palette.getContrastText(theme.palette.primary.light),
+                bgcolor: theme.palette.primary.light,
               }
             }}
           >
