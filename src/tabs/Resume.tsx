@@ -5,7 +5,7 @@ import WorkHistory from "../Resume/WorkHistory";
 import EducationHistory from "../Resume/EducationHistory";
 import data from "../data";
 import Courses from "../Courses";
-import PageHeader from "./PageHeader";
+import PageHeader from "../PageHeader";
 
 const Heading: React.FC<{ styles?: any, title: string }> = ({ styles, title }) => {
   const theme = useTheme()
@@ -20,7 +20,7 @@ const Resume = () => {
   return (
       !data ? <Container maxWidth="lg"><Alert variant="standard" color="error">Error: Problem fetching data</Alert></Container> : (
       <Container maxWidth="lg" sx={{mb: 8}}>
-        <PageHeader title="Home &gt; Resume" />
+        <PageHeader title="Resume" />
       <Stack
         justifyContent="space-between"
         alignItems="flex-start"

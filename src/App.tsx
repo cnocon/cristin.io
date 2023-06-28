@@ -6,7 +6,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Box, Stack } from '@mui/material';
 import Footer from "./Footer";
 import NotFound from "./NotFound"
-
+// import { LINEAR_RAINBOW_GRADIENT } from './index'
+// backgroundImage: LINEAR_RAINBOW_GRADIENT,
 const App: React.FunctionComponent<{ children?: any }> = ({ children }) => {
   return (
     <BrowserRouter>

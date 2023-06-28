@@ -2,12 +2,12 @@ import React from "react";
 import { Card, CardHeader, Container, Link, Stack, Typography, useTheme, CardActionArea, Box } from "@mui/material";
 import data from "../data";
 import { iconDictionary } from "../constants";
-import PageHeader from "./PageHeader";
+import PageHeader from "../PageHeader";
 const Contact = () => {
   const theme = useTheme();
   return (
     <Container maxWidth="lg">
-      <PageHeader title="Home &gt; Contact" />
+      <PageHeader title="Contact" />
       <Stack direction="row" justifyContent="center" spacing={0} flexWrap="wrap" useFlexGap>
         {data.contact.map((contact) => {
           const { label, link, value, icon } = contact;
@@ -37,17 +37,17 @@ const Contact = () => {
                 title={<>
                   <Box style={{width: '100%'}}>
                     <ContactIcon
-                      sx={{border: '2px solid ' + theme.palette.secondary.main, color: theme.palette.secondary.main, backgroundColor: theme.palette.primary.dark, width: '50px', height: '50px', borderRadius: '50%', padding: '10px'}}
+                      sx={{border: '4px solid ' + theme.palette.secondary.main, color: theme.palette.secondary.main, backgroundColor: theme.palette.primary.dark, width: '50px', height: '50px', borderRadius: '50%', padding: '8px'}}
                     />
                   </Box>
                     {label}
                   </>
                 }
                 subheader={value}
-                sx={{color: "inherit", textAlign: 'center', display: 'flex'
+                sx={{color: "inherit", textAlign: 'center', display: 'flex', fontWeight: 400,
                 }}
-                titleTypographyProps={{color: "inherit"}}
-                subheaderTypographyProps={{color: "inherit"}}
+                titleTypographyProps={{color: 'inherit', fontWeight: 500}}
+                subheaderTypographyProps={{color: theme.palette.text.disabled,fontWeight: 400}}
               />
               </Link>
             </CardActionArea>

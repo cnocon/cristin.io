@@ -9,11 +9,30 @@ html {
   width: 100%;
   margin: 0 auto;
 }
+.page-header p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+}
+.page-header p svg {
+  line-height: 16px;
+  color: hsl(45, 85%, 85%);
+}
 .page-header p span {
   z-index: 100;
   position: relative;
   padding: 0 1rem;
   background-color: white;
+  display: inline-block;
+  line-height: inherit;
+  vertical-align: middle;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .page-header::before {
   width: 100%;

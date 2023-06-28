@@ -12,6 +12,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { useTheme } from "@mui/material"
 import SquarePortrait from "./images/square-portrait.png";
+import { LINEAR_RAINBOW_GRADIENT } from './index'
 
 const pages = [
   {name: "Resume", path: "/"},
@@ -135,7 +136,7 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
                 navigate(path);
               }}
               color="secondary"
-              sx={{ mx: 1, my: 2, boxShadow: 0, fontFamily: 'Oswald, Impact, sans-serif', color: theme.palette.text.primary}}
+              sx={{ mx: 1, my: 2, boxShadow: 0, color: theme.palette.text.primary}}
             >
               {name}
             </Button>
