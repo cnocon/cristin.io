@@ -8,7 +8,8 @@ const Contact = () => {
   return (
     <Container maxWidth="lg">
       <PageHeader title="Contact" />
-      <Stack direction="row" justifyContent="center" spacing={0} flexWrap="wrap" useFlexGap>
+      <Stack direction="column" sx={{minHeight: '40vh', height: '100%',  margin: 'auto', justifyContent: 'center'}}>
+        <Stack direction="row" justifyContent="center" spacing={0} flexWrap="wrap" useFlexGap>
         {data.contact.map((contact) => {
           const { label, link, value, icon } = contact;
           const ContactIcon = iconDictionary[icon];
@@ -53,6 +54,7 @@ const Contact = () => {
             </CardActionArea>
           </Card>
         })}
+      </Stack>
       </Stack>
     </Container>
   )

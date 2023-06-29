@@ -32,9 +32,9 @@ const WorkHistory: React.FC<{ data: any }> = ({ data }) => {
         <CardContent sx={{paddingTop: 0}}>
           <List>
             {job.description.map((bullet: string, index: number) => {
-              return <ListItem key={bullet}>
-                <ListItemIcon>
-                  <CheckIcon sx={{color: theme.palette.grey.A700}} />
+              return <ListItem key={bullet} sx={{alignItems: 'flex-start'}}>
+                <ListItemIcon sx={{paddingTop: '9px', margin: 0, minWidth: '2rem'}}>
+                  <CheckIcon sx={{fontSize: '1rem', color: theme.palette.text.primary}} />
                 </ListItemIcon>
 
                 <ListItemText primary={bullet} />
@@ -47,11 +47,11 @@ const WorkHistory: React.FC<{ data: any }> = ({ data }) => {
               <List>
                 {job.honors.map((honor: any, index: number) => {return (<div key={`honor-${index}`}>
                   <ListItem sx={{ display: 'flex', flexWrap: 'wrap', textTransform: 'uppercase', fontWeight: 400, lineHeight: 1, mt: 1}}>
-                    <ListItemIcon>
+                    <ListItemIcon sx={{minWidth: '2rem', paddingTop: '4px', fontSize: '1rem'}}>
                       <EmojiEventsIcon sx={{color: theme.palette.secondary.main}} />
                     </ListItemIcon> {honor.name}
                   </ListItem>
-                  <ListSubheader sx={{lineHeight: '1em', textTransform: 'none', flexBasis: '100%'}} inset>{honor.detail}</ListSubheader></div>
+                  <ListSubheader sx={{minWidth: '2rem', lineHeight: '1em', textTransform: 'none', flexBasis: '100%', paddingLeft: '3rem'}} inset>{honor.detail}</ListSubheader></div>
                 )})}
               </List>
             </>

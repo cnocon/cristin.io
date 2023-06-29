@@ -16,8 +16,8 @@ const Courses: React.FC<{ data: any }> = ({ data }) => {
     const isOdd = index % 2 > 0
     return (
     <Card variant="outlined" key={`course-${index}`} sx={{width: '100%', boxShadow: 4, p: 2}}>
-      <div style={{backgroundColor: isEven ? theme.palette.primary.main : theme.palette.secondary.main, borderRadius: '50%', height: '70px', width: '70px', margin: 'auto', border: isOdd ? `4px solid ${theme.palette.primary.main}` : `4px solid ${theme.palette.secondary.main}`}}>
-        <IconComponent color={isEven ? "secondary" : "primary"} sx={{margin: '2px', width: 58, height: 58}} />
+      <div style={{backgroundColor: isEven ? theme.palette.primary.dark : theme.palette.secondary.main, borderRadius: '50%', height: '70px', width: '70px', margin: 'auto', border: isOdd ? `4px solid ${theme.palette.primary.dark}` : `4px solid ${theme.palette.secondary.main}`}}>
+        <IconComponent sx={{color: isEven ? theme.palette.secondary.main : theme.palette.primary.dark, margin: '2px', width: 58, height: 58}} />
       </div>
       <CardHeader
         title={<Typography variant="h5" sx={{textAlign: 'center'}}>{course.title} | {course.platform}</Typography>}

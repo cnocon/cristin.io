@@ -58,7 +58,7 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
               letterSpacing: ".3rem",
               textDecoration: "none",
               fontSize: "3.5rem",
-              color: theme.palette.getContrastText(theme.palette.grey[100])
+              color: theme.palette.text.primary
             }}
           >
             Cristin O'Connor
@@ -131,12 +131,12 @@ const ResponsiveAppBar: React.FC<{ styles?: any }> = ({ styles }) => {
           {pages.map(({ name, path }) => (
             <Button
               key={`desktop-nav-${name}`}
-              variant="outlined"
+              color="secondary"
+              variant={window.location.pathname === path ? 'contained' : 'text'}
               onClick={(e) => {
                 navigate(path);
               }}
-              color="secondary"
-              sx={{ mx: 1, my: 2, boxShadow: 0, color: theme.palette.text.primary}}
+              sx={{ mx: 1, my: 2, fontWeight: 800, fontFamily: 'Oswald, Impact, sans-serif', boxShadow: 0, color: theme.palette.text.primary}}
             >
               {name}
             </Button>
